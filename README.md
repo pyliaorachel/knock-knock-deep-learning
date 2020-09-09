@@ -1,2 +1,7 @@
-# knock-knock-deep-learning
-Source codes for "Knock Knock! Deep Learning" series.
+# Knock Knock! Deep Learning
+
+Content, links, and source codes for the "Knock Knock! Deep Learning" series.
+
+## Content
+
+Series will begin on Sep 15.
