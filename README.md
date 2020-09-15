@@ -1,6 +1,6 @@
 # Knock Knock! Deep Learning
 
-Source codes for "Knock Knock! Deep Learning" series.
+Content, links, and source codes for the "Knock Knock! Deep Learning" series.
 
 ## Content
 
