@@ -16,3 +16,4 @@ HackMD is the easiest to read for its Latex support!
 |Day 3 / Deep Learning 簡介 / 細解 Deep Learning（二） —— Training|[Link](https://hackmd.io/@pyliao/knockknockdl-day3)|[Link](https://ithelp.ithome.com.tw/articles/10239048)|
 |Day 4 / 必備實作知識與工具 / Coding 前你必須認識的工具|[Link](https://hackmd.io/@pyliao/knockknockdl-day4)|[Link](https://ithelp.ithome.com.tw/articles/10239737)|
 |Day 5 / 必備實作知識與工具 / 關於 Training，還有一些基本功（一）|[Link](https://hackmd.io/@pyliao/knockknockdl-day5)|[Link](https://ithelp.ithome.com.tw/articles/10240556)|
+|Day 6 / 必備實作知識與工具 / 關於 Training，還有一些基本功（二）|[Link](https://hackmd.io/@pyliao/knockknockdl-day6)|[Link](https://ithelp.ithome.com.tw/articles/10241205)|
