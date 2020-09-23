@@ -18,3 +18,4 @@ HackMD is the easiest to read for its Latex support!
 |Day 5 / 必備實作知識與工具 / 關於 Training，還有一些基本功（一）|[Link](https://hackmd.io/@pyliao/knockknockdl-day5)|[Link](https://ithelp.ithome.com.tw/articles/10240556)|
 |Day 6 / 必備實作知識與工具 / 關於 Training，還有一些基本功（二）|[Link](https://hackmd.io/@pyliao/knockknockdl-day6)|[Link](https://ithelp.ithome.com.tw/articles/10241205)|
 |Day 7 / PyTorch / 深度學習框架之亂|[Link](https://hackmd.io/@pyliao/knockknockdl-day7)|[Link](https://ithelp.ithome.com.tw/articles/10241809)|
+|Day 8 / PyTorch 簡介 / PyTorch 入門（一） —— 簡介|[Link](https://hackmd.io/@pyliao/knockknockdl-day8)|[Link](https://ithelp.ithome.com.tw/articles/10242468)|
