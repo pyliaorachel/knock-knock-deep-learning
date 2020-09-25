@@ -20,3 +20,4 @@ HackMD is the easiest to read for its Latex support!
 |Day 7 / PyTorch / 深度學習框架之亂|[Link](https://hackmd.io/@pyliao/knockknockdl-day7)|[Link](https://ithelp.ithome.com.tw/articles/10241809)|
 |Day 8 / PyTorch 簡介 / PyTorch 入門（一） —— 簡介|[Link](https://hackmd.io/@pyliao/knockknockdl-day8)|[Link](https://ithelp.ithome.com.tw/articles/10242468)|
 |Day 9 / PyTorch 簡介 / PyTorch 入門（二） —— MNIST 手寫數字辨識|[Link](https://hackmd.io/@pyliao/knockknockdl-day9)|[Link](https://ithelp.ithome.com.tw/articles/10243145)|
+|Day 10 / DL x NLP / 讓我著迷的 Word2Vec|[Link](https://hackmd.io/@pyliao/knockknockdl-day10)|[Link](https://ithelp.ithome.com.tw/articles/10243725)|
