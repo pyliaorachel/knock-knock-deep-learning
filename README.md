@@ -23,3 +23,4 @@ HackMD is the easiest to read for its Latex support!
 |Day 10 / DL x NLP / 讓我著迷的 Word2Vec|[Link](https://hackmd.io/@pyliao/knockknockdl-day10)|[Link](https://ithelp.ithome.com.tw/articles/10243725)|
 |Day 11 / DL x NLP / 語言與 RNN|[Link](https://hackmd.io/@pyliao/knockknockdl-day11)|[Link](https://ithelp.ithome.com.tw/articles/10244308)|
 |Day 12 / DL x NLP / 打掉重練的勇氣 —— Google 翻譯與 Seq2Seq|[Link](https://hackmd.io/@pyliao/knockknockdl-day12)|[Link](https://ithelp.ithome.com.tw/articles/10245015)|
+|Day 13 / DL x NLP / 大躍進 —— Attention & Transformer|[Link](https://hackmd.io/@pyliao/knockknockdl-day13)|[Link](https://ithelp.ithome.com.tw/articles/10245626)|
