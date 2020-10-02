@@ -28,3 +28,4 @@ HackMD is the easiest to read for its Latex support!
 |Day 15 / DL x NLP / 心有不甘的 Project Talk —— An Exploration in L2 Word Embedding Alignment|[Link](https://hackmd.io/@pyliao/knockknockdl-day15)|[Link](https://ithelp.ithome.com.tw/articles/10246714)|
 |Day 16 / DL x NLP / NLP 總結與發展|[Link](https://hackmd.io/@pyliao/knockknockdl-day16)|[Link](https://ithelp.ithome.com.tw/articles/10247324)|
 |Day 17 / DL x CV / 從 ImageNet 發起的 Data 大戰|[Link](https://hackmd.io/@pyliao/knockknockdl-day17)|[Link](https://ithelp.ithome.com.tw/articles/10247893)|
+|Day 18 / DL x CV / 圖像與 CNN|[Link](https://hackmd.io/@pyliao/knockknockdl-day18)|[Link](https://ithelp.ithome.com.tw/articles/10248289)|
