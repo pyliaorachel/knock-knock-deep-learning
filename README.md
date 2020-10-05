@@ -30,3 +30,4 @@ HackMD is the easiest to read for its Latex support!
 |Day 17 / DL x CV / 從 ImageNet 發起的 Data 大戰|[Link](https://hackmd.io/@pyliao/knockknockdl-day17)|[Link](https://ithelp.ithome.com.tw/articles/10247893)|
 |Day 18 / DL x CV / 圖像與 CNN|[Link](https://hackmd.io/@pyliao/knockknockdl-day18)|[Link](https://ithelp.ithome.com.tw/articles/10248289)|
 |Day 19 / DL x CV / 文字也有結構，圖像也有序列|[Link](https://hackmd.io/@pyliao/knockknockdl-day19)|[Link](https://ithelp.ithome.com.tw/articles/10248735)|
+|Day 20 / DL x CV / 改變世界的 GAN|[Link](https://hackmd.io/@pyliao/knockknockdl-day20)|[Link](https://ithelp.ithome.com.tw/articles/10249256)|
