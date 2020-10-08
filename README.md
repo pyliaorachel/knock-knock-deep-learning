@@ -33,3 +33,4 @@ HackMD is the easiest to read for its Latex support!
 |Day 20 / DL x CV / 改變世界的 GAN|[Link](https://hackmd.io/@pyliao/knockknockdl-day20)|[Link](https://ithelp.ithome.com.tw/articles/10249256)|
 |Day 21 / DL x CV / 小有成果的 Project Talk —— Cross-Lingual Font Style Transfer|[Link](https://hackmd.io/@pyliao/HJMWWbDHv)|[Link](https://ithelp.ithome.com.tw/articles/10249738)|
 |Day 22 / DL x CV / CV 與自駕車|[Link](https://hackmd.io/@pyliao/knockknockdl-day22)|[Link](https://ithelp.ithome.com.tw/articles/10250185)|
+|Day 23 / DL x CV / CV 總結與發展|[Link](https://hackmd.io/@pyliao/knockknockdl-day23)|[Link](https://ithelp.ithome.com.tw/articles/10250673)|
