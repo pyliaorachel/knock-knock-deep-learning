@@ -27,3 +27,12 @@ HackMD is the easiest to read for its Latex support!
 |Day 14 / DL x NLP / 再度大躍進 —— BERT|[Link](https://hackmd.io/@pyliao/knockknockdl-day14)|[Link](https://ithelp.ithome.com.tw/articles/10246138)|
 |Day 15 / DL x NLP / 心有不甘的 Project Talk —— An Exploration in L2 Word Embedding Alignment|[Link](https://hackmd.io/@pyliao/knockknockdl-day15)|[Link](https://ithelp.ithome.com.tw/articles/10246714)|
 |Day 16 / DL x NLP / NLP 總結與發展|[Link](https://hackmd.io/@pyliao/knockknockdl-day16)|[Link](https://ithelp.ithome.com.tw/articles/10247324)|
+|Day 17 / DL x CV / 從 ImageNet 發起的 Data 大戰|[Link](https://hackmd.io/@pyliao/knockknockdl-day17)|[Link](https://ithelp.ithome.com.tw/articles/10247893)|
+|Day 18 / DL x CV / 圖像與 CNN|[Link](https://hackmd.io/@pyliao/knockknockdl-day18)|[Link](https://ithelp.ithome.com.tw/articles/10248289)|
+|Day 19 / DL x CV / 文字也有結構，圖像也有序列|[Link](https://hackmd.io/@pyliao/knockknockdl-day19)|[Link](https://ithelp.ithome.com.tw/articles/10248735)|
+|Day 20 / DL x CV / 改變世界的 GAN|[Link](https://hackmd.io/@pyliao/knockknockdl-day20)|[Link](https://ithelp.ithome.com.tw/articles/10249256)|
+|Day 21 / DL x CV / 小有成果的 Project Talk —— Cross-Lingual Font Style Transfer|[Link](https://hackmd.io/@pyliao/HJMWWbDHv)|[Link](https://ithelp.ithome.com.tw/articles/10249738)|
+|Day 22 / DL x CV / CV 與自駕車|[Link](https://hackmd.io/@pyliao/knockknockdl-day22)|[Link](https://ithelp.ithome.com.tw/articles/10250185)|
+|Day 23 / DL x CV / CV 總結與發展|[Link](https://hackmd.io/@pyliao/knockknockdl-day23)|[Link](https://ithelp.ithome.com.tw/articles/10250673)|
+|Day 24 / DL x RL / 決策與 RL|[Link](https://hackmd.io/@pyliao/knockknockdl-day24)|[Link](https://ithelp.ithome.com.tw/articles/10251184)|k
+|Day 25 / DL x RL / Hello Reinforcement Learning —— CartPole|[Link](https://hackmd.io/@pyliao/knockknockdl-day25)|[Link](https://ithelp.ithome.com.tw/articles/10251599)|
