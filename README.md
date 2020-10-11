@@ -36,3 +36,4 @@ HackMD is the easiest to read for its Latex support!
 |Day 23 / DL x CV / CV 總結與發展|[Link](https://hackmd.io/@pyliao/knockknockdl-day23)|[Link](https://ithelp.ithome.com.tw/articles/10250673)|
 |Day 24 / DL x RL / 決策與 RL|[Link](https://hackmd.io/@pyliao/knockknockdl-day24)|[Link](https://ithelp.ithome.com.tw/articles/10251184)|k
 |Day 25 / DL x RL / Hello Reinforcement Learning —— CartPole|[Link](https://hackmd.io/@pyliao/knockknockdl-day25)|[Link](https://ithelp.ithome.com.tw/articles/10251599)|
+|Day 26 / DL x RL / 小試身手的 Project Talk —— DeepCueLearning|[Link](https://hackmd.io/@pyliao/knockknockdl-day26)|[Link](https://ithelp.ithome.com.tw/articles/10251991)|
