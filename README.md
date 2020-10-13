@@ -38,3 +38,4 @@ HackMD is the easiest to read for its Latex support!
 |Day 25 / DL x RL / Hello Reinforcement Learning —— CartPole|[Link](https://hackmd.io/@pyliao/knockknockdl-day25)|[Link](https://ithelp.ithome.com.tw/articles/10251599)|
 |Day 26 / DL x RL / 小試身手的 Project Talk —— DeepCueLearning|[Link](https://hackmd.io/@pyliao/knockknockdl-day26)|[Link](https://ithelp.ithome.com.tw/articles/10251991)|
 |Day 27 / DL x RL / 令世界驚艷的 AlphaGo|[Link](https://hackmd.io/@pyliao/knockknockdl-day27)|[Link](https://ithelp.ithome.com.tw/articles/10252358)
+|Day 28 / DL x RL / RL 不只會打電動？|[Link](https://hackmd.io/@pyliao/knockknockdl-day28)|[Link](https://ithelp.ithome.com.tw/articles/10252719)|
