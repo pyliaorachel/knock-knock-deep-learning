@@ -40,3 +40,4 @@ HackMD is the easiest to read for its Latex support!
 |Day 27 / DL x RL / 令世界驚艷的 AlphaGo|[Link](https://hackmd.io/@pyliao/knockknockdl-day27)|[Link](https://ithelp.ithome.com.tw/articles/10252358)
 |Day 28 / DL x RL / RL 不只會打電動？|[Link](https://hackmd.io/@pyliao/knockknockdl-day28)|[Link](https://ithelp.ithome.com.tw/articles/10252719)|
 |Day 29 / DL x RL / RL 總結與發展|[Link](https://hackmd.io/@pyliao/knockknockdl-day29)|[Link](https://ithelp.ithome.com.tw/articles/10253089)|
+|Day 30 / 結語與 Checkpoint 解答|[Link](https://hackmd.io/@pyliao/knockknockdl-day30)|[Link](https://ithelp.ithome.com.tw/articles/10253090)|
