@@ -36,3 +36,8 @@ HackMD is the easiest to read for its Latex support!
 |Day 23 / DL x CV / CV 總結與發展|[Link](https://hackmd.io/@pyliao/knockknockdl-day23)|[Link](https://ithelp.ithome.com.tw/articles/10250673)|
 |Day 24 / DL x RL / 決策與 RL|[Link](https://hackmd.io/@pyliao/knockknockdl-day24)|[Link](https://ithelp.ithome.com.tw/articles/10251184)|k
 |Day 25 / DL x RL / Hello Reinforcement Learning —— CartPole|[Link](https://hackmd.io/@pyliao/knockknockdl-day25)|[Link](https://ithelp.ithome.com.tw/articles/10251599)|
+|Day 26 / DL x RL / 小試身手的 Project Talk —— DeepCueLearning|[Link](https://hackmd.io/@pyliao/knockknockdl-day26)|[Link](https://ithelp.ithome.com.tw/articles/10251991)|
+|Day 27 / DL x RL / 令世界驚艷的 AlphaGo|[Link](https://hackmd.io/@pyliao/knockknockdl-day27)|[Link](https://ithelp.ithome.com.tw/articles/10252358)
+|Day 28 / DL x RL / RL 不只會打電動？|[Link](https://hackmd.io/@pyliao/knockknockdl-day28)|[Link](https://ithelp.ithome.com.tw/articles/10252719)|
+|Day 29 / DL x RL / RL 總結與發展|[Link](https://hackmd.io/@pyliao/knockknockdl-day29)|[Link](https://ithelp.ithome.com.tw/articles/10253089)|
+|Day 30 / 結語與 Checkpoint 解答|[Link](https://hackmd.io/@pyliao/knockknockdl-day30)|[Link](https://ithelp.ithome.com.tw/articles/10253090)|
