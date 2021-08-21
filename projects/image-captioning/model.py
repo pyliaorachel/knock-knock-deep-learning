@@ -53,14 +53,14 @@ class CaptionDecoder(nn.Module):
         self.dropout = nn.Dropout(dropout)
         self.fc = nn.Linear(dec_hidden_dim, n_vocab)
 
-    def decode_to_end(self, img_embedding, n_vocab, start_token_idx, end_token_idx, max_seq_len=50):
+    def decode_to_end(self, img_embedding, n_vocab, start_token_idx, end_token_idx, max_seq_len=50, k=1):
         last_token = start_token_idx
         caption = [last_token]
         h = img_embedding
         c = img_embedding
         while len(caption) < max_seq_len and last_token != end_token_idx: 
             # Construct input
-            word = torch.tensor([last_token], dtype=torch.long).to(self.device)
+            word = torch.tensor([last_token], dtype=torch.long)
             word_embedding = self.emb(word)
 
             # Predict next character

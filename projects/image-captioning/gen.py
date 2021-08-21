@@ -26,6 +26,8 @@ def parse_args():
                         help='hidden state dimension in decoder model (default: 256)')
     parser.add_argument('--max-seq-len', type=int, default=50,
                         help='max seq length for generated caption (default: 50)')
+    parser.add_argument('--k', type=int, default=3,
+                        help='size for beam search (default: 3)')
     return parser.parse_args()
 
 def gen_caption(encoder, decoder, img, dataset, args):
@@ -45,7 +47,7 @@ def gen_caption(encoder, decoder, img, dataset, args):
     img_embedding = encoder(img)
 
     # Decode caption
-    caption_idx = decoder.decode_to_end(img_embedding, len(vocab), start_token_idx, end_token_idx)
+    caption_idx = decoder.decode_to_end(img_embedding, len(vocab), start_token_idx, end_token_idx, k=args.k)
     caption = ' '.join([int_to_word[i] for i in caption_idx[1:-1]])
     print(caption)
 

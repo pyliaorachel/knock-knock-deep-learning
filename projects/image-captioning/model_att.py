@@ -62,31 +62,64 @@ class CaptionDecoder(nn.Module):
         c = self.enc_to_dec_c(mean_img_embeddings)
         return h, c
 
-    def decode_to_end(self, img_embedding, n_vocab, start_token_idx, end_token_idx, max_seq_len=50):
-        last_token = start_token_idx
-        caption = [last_token]
-
+    def decode_to_end(self, img_embedding, n_vocab, start_token_idx, end_token_idx, max_seq_len=50, k=1):
+        # Beam search
+        top_k_captions = [[start_token_idx]] * k
+        top_k_scores = torch.zeros((k, 1))
         img_embedding = img_embedding.view(1, self.enc_hidden_dim, -1).permute(0, 2, 1)
-        h, c = self.init_hidden_cell_states(img_embedding)
-        while len(caption) < max_seq_len and last_token != end_token_idx: 
+        img_embeddings = img_embedding.expand(k, -1, -1)
+        h, c = self.init_hidden_cell_states(img_embeddings)
+
+        seq_t = 0
+        completed_captions = []
+        completed_caption_scores = []
+        while seq_t < max_seq_len and len(top_k_scores) != 0:
+            k = len(top_k_scores)
+
             # Construct input
-            word = torch.tensor([last_token], dtype=torch.long).to(self.device)
+            last_tokens = [s[-1] for s in top_k_captions]
+            word = torch.tensor(last_tokens, dtype=torch.long)
             caption_emb = self.emb(word)
 
-            # Predict next character
+            # Predict
             with torch.no_grad():
-                att_img_emb = self.attention(img_embedding, h)
+                att_img_emb = self.attention(img_embeddings, h)
                 inp = torch.cat([caption_emb, att_img_emb], dim=1) 
                 h, c = self.lstm_cell(inp, (h, c))
                 pred = self.fc(h)
-                prob = F.softmax(pred, dim=1)[0]
+                log_prob = F.log_softmax(pred, dim=1)
 
-            # Pick word based on probability instead of always picking the highest value
-            word_idx = np.random.choice(list(range(n_vocab)), p=prob.numpy())
+            # Expand the seq, pick k seq with best scores
+            total_scores = top_k_scores.expand_as(log_prob) + log_prob
+            top_k_scores, top_k_idx = total_scores.view(-1).topk(k)
 
-            caption.append(word_idx)
-            last_token = word_idx
-        return caption
+            new_top_k_captions = []
+            new_top_k_scores = []
+            for seq_i, idx in enumerate(top_k_idx):
+                idx = idx.item()
+                prev = int(idx / n_vocab)
+                nxt = idx % n_vocab
+                expanded_seq = top_k_captions[prev] + [nxt]
+
+                if nxt == end_token_idx:
+                    completed_captions.append(expanded_seq)
+                    completed_caption_scores.append(top_k_scores[seq_i])
+                else:
+                    new_top_k_captions.append(expanded_seq)
+                    new_top_k_scores.append(top_k_scores[seq_i])
+            top_k_captions = new_top_k_captions
+            top_k_scores = torch.tensor(new_top_k_scores).unsqueeze(1)
+
+            seq_t += 1
+
+        # From all the completed seq, return the one with highest score as result
+        # If no completed seq, return highest in remaining top k captions
+        if len(completed_captions) != 0:
+            max_idx = torch.argmax(torch.tensor(completed_caption_scores)).item()
+            return completed_captions[max_idx.item()]
+        else:
+            max_idx = torch.argmax(top_k_scores.squeeze(1)).item()
+            return top_k_captions[max_idx]
 
     def forward(self, img_embeddings, captions, caption_lengths):
         batch_size = img_embeddings.size(0)
