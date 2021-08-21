@@ -29,12 +29,16 @@ $ python main.py -h
 
 ## Training Info We Use
 
+Albert:
+
 ```bash
 BATCH_SIZE: 32
 SEQ_LENGTH: 128
-LR: 0.0001
-EPOCHS: 5
-LOG_INTERVAL: 5
+HIDDEN_DIM: 256
+LR: 1e-06
+DROPOUT: 0.2
+EPOCHS: 50
+LOG_INTERVAL: 10
 Training set size: 6823
 Test set size: 1706
 ```
