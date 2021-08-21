@@ -2,14 +2,13 @@
 
 Image captioning based on encoder-decoder model.
 
-Running on [Colab](https://colab.research.google.com/drive/1Dp2F2DOZG8uALnBV_J-972s6QEGucmN2?usp=sharing) (Naive model)
-Running on [Colab](https://colab.research.google.com/drive/1oAfCxGen_zY_KlamhHKcmKGZ24w2U7Gc?usp=sharing) (With attention)
-Running on [Colab](https://colab.research.google.com/drive/1GeUnHgA_dRFfEMkZ02PqXA_M430GtJoW?usp=sharing) (With attention + pretrained models)
+- Running on [Colab](https://colab.research.google.com/drive/1Dp2F2DOZG8uALnBV_J-972s6QEGucmN2?usp=sharing) (Naive model)
+- Running on [Colab](https://colab.research.google.com/drive/1oAfCxGen_zY_KlamhHKcmKGZ24w2U7Gc?usp=sharing) (With attention)
+- Running on [Colab](https://colab.research.google.com/drive/1GeUnHgA_dRFfEMkZ02PqXA_M430GtJoW?usp=sharing) (With attention + pretrained models)
 
 ## Dataset
 
 [Flickr8k dataset](https://www.kaggle.com/adityajn105/flickr8k?select=Images).
-[GloVe word embeddings](https://nlp.stanford.edu/projects/glove/).
 
 ## Usage
 
@@ -29,6 +28,7 @@ If you want to use pretrained models:
 
 ```bash
 # Download GloVe embeddings from their website, then put the embedding file you want under data/
+# https://nlp.stanford.edu/projects/glove/
 
 # Train & test
 $ python main.py <image-folder> <caption-file> <output-encoder-file> <output-decoder-file> --embedding-dim <emb-dim> --use-pretrained

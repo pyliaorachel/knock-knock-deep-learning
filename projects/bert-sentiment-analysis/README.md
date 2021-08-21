@@ -2,8 +2,8 @@
 
 BERT Sentiment Analysis using [huggingface](https://huggingface.co/). 
 
-Running on [Colab](https://colab.research.google.com/drive/1wyTvlDgREFyuJgRoev2EPnj8fjcyHA__?usp=sharing) (Bert)
-Running on [Colab](https://colab.research.google.com/drive/1rd4h-bXPWgUYmXqVENB9SF2md9uyWSfb?usp=sharing) (Albert)
+- Running on [Colab](https://colab.research.google.com/drive/1wyTvlDgREFyuJgRoev2EPnj8fjcyHA__?usp=sharing) (Bert)
+- Running on [Colab](https://colab.research.google.com/drive/1rd4h-bXPWgUYmXqVENB9SF2md9uyWSfb?usp=sharing) (Albert)
 
 ## Dataset
 
