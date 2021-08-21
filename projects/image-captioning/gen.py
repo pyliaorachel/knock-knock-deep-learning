@@ -6,7 +6,7 @@ import torch.nn.functional as F
 from skimage import io
 from skimage.transform import resize
 
-from model_att import ImageEncoder, CaptionDecoder 
+from model import ImageEncoder, ImageEncoderPretrained, CaptionDecoder 
 from dataset import ImageCaptionDataset
 
 
@@ -20,6 +20,8 @@ def parse_args():
                         help='image file')
     parser.add_argument('caption_path', type=str,
                         help='path to caption data file')
+    parser.add_argument('--use-pretrained', action='store_true',
+                        help='use pretrained torchvision models (default: False)')
     parser.add_argument('--embedding-dim', type=int, default=256,
                         help='embedding dimension for characters in training model (default: 256)')
     parser.add_argument('--dec-hidden-dim', type=int, default=256,
@@ -65,9 +67,14 @@ def main():
     img = img.permute(2, 0, 1)  # (w, h, c) -> (c, w, h)
 
     # Load model
-    encoder = ImageEncoder('cpu')
+    if args.use_pretrained:
+        encoder = ImageEncoderPretrained('cpu')
+        enc_hidden_dim = 2208
+    else:
+        encoder = ImageEncoder('cpu')
+        enc_hidden_dim = 1024
     decoder = CaptionDecoder('cpu', len(dataset.vocab), embedding_dim=args.embedding_dim,
-                             dec_hidden_dim=args.dec_hidden_dim)
+                             enc_hidden_dim=enc_hidden_dim, dec_hidden_dim=args.dec_hidden_dim)
     encoder.load_state_dict(torch.load(args.encoder))
     decoder.load_state_dict(torch.load(args.decoder))
 

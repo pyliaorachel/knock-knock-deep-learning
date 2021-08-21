@@ -8,7 +8,7 @@ from torch.nn.utils.rnn import pack_padded_sequence
 import matplotlib.pyplot as plt
 
 from dataset import ImageCaptionDataset
-from model_att import ImageEncoder, ImageEncoderPretrained, CaptionDecoder
+from model import ImageEncoder, ImageEncoderPretrained, CaptionDecoder
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
@@ -45,6 +45,8 @@ def parse_args():
 def train(encoder, decoder, enc_optimizer, dec_optimizer, data, args):
     encoder.train()
     decoder.train()
+    encoder.freeze_pretrained(True)
+    decoder.freeze_pretrained(True)
 
     losses = []
     for epoch in range(args.epochs):
@@ -143,7 +145,8 @@ def main():
         encoder = ImageEncoder(device, dropout=args.enc_dropout).to(device)
         enc_hidden_dim = 1024
     decoder = CaptionDecoder(device, len(dataset.vocab), embedding_dim=args.embedding_dim,
-                             enc_hidden_dim=enc_hidden_dim, dec_hidden_dim=args.dec_hidden_dim, dropout=args.dec_dropout).to(device)
+                             enc_hidden_dim=enc_hidden_dim, dec_hidden_dim=args.dec_hidden_dim, dropout=args.dec_dropout,
+                             use_pretrained_emb=args.use_pretrained, word_to_int=dataset.word_to_int).to(device)
     enc_optimizer = torch.optim.Adam(encoder.parameters(), lr=args.lr)
     dec_optimizer = torch.optim.Adam(decoder.parameters(), lr=args.lr)
 

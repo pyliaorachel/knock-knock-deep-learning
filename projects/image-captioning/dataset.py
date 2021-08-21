@@ -72,6 +72,9 @@ class ImageCaptionDataset(Dataset):
         """
         Build vocab over all captions, convert captions to ints with start and end tokens
         """
+        # Lowercase all words
+        captions = [caption.lower() for caption in captions]
+
         # Add special tokens to vocab
         vocab = set()
         vocab.add('<start>')

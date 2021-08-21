@@ -1,11 +1,17 @@
+import os
+
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
+import torchvision.models as models
 import numpy as np
+from gensim.test.utils import datapath, get_tmpfile
+from gensim.models import KeyedVectors
+from gensim.scripts.glove2word2vec import glove2word2vec
 
 
 class ImageEncoder(nn.Module):
-    def __init__(self, device, hidden_dim=1024, dropout=0.2):
+    def __init__(self, device, dropout=0.2):
         super(ImageEncoder, self).__init__()
 
         self.device = device
@@ -22,7 +28,10 @@ class ImageEncoder(nn.Module):
         self.max_pool5 = nn.MaxPool2d(2)
 
         self.dropout = nn.Dropout2d(dropout)
-        self.fc = nn.Linear(200704, hidden_dim)
+
+    def freeze_pretrained(self, freeze):
+        # No pretrained model
+        pass
 
     def forward(self, imgs):
         y = self.max_pool1(torch.relu(self.conv1(imgs)))
@@ -34,50 +43,149 @@ class ImageEncoder(nn.Module):
         y = self.max_pool4(torch.relu(self.conv4(y)))
         y = self.dropout(y)
         y = self.max_pool5(torch.relu(self.conv5(y)))
-        y = torch.flatten(y, 1)
-        y = self.fc(y)
+        return y
+
+class ImageEncoderPretrained(nn.Module):
+    def __init__(self, device):
+        super(ImageEncoderPretrained, self).__init__()
+
+        self.device = device
+
+        # Densenet includes an extra layer for classification, but it's not needed since we only want the embedding
+        densenet = models.densenet161(pretrained=True)
+        modules = list(densenet.children())[:-1]
+        self.densenet = nn.Sequential(*modules)
+
+    def freeze_pretrained(self, freeze):
+        for param in self.densenet.parameters():
+            param.requires_grad = not freeze
+
+    def forward(self, imgs):
+        y = self.densenet(imgs)
         return y
 
 class CaptionDecoder(nn.Module):
-    def __init__(self, device, n_vocab, enc_hidden_dim=1024, embedding_dim=256, dec_hidden_dim=256, dropout=0.2):
+    def __init__(self, device, n_vocab, embedding_dim=256, enc_hidden_dim=1024, dec_hidden_dim=256, dropout=0.2, use_pretrained_emb=False, word_to_int=None):
         super(CaptionDecoder, self).__init__()
 
         self.device = device
         self.n_vocab = n_vocab
+        self.embedding_dim = embedding_dim
+        self.enc_hidden_dim = enc_hidden_dim
+        self.dec_hidden_dim = dec_hidden_dim
 
         self.enc_to_dec_h = nn.Linear(enc_hidden_dim, dec_hidden_dim)
         self.enc_to_dec_c = nn.Linear(enc_hidden_dim, dec_hidden_dim)
 
-        self.emb = nn.Embedding(n_vocab, embedding_dim)
-        self.lstm_cell = nn.LSTMCell(embedding_dim, dec_hidden_dim)
+        self.emb = self.init_emb(use_pretrained_emb, word_to_int)
+        self.lstm_cell = nn.LSTMCell(embedding_dim + enc_hidden_dim, dec_hidden_dim)
         self.dropout = nn.Dropout(dropout)
         self.fc = nn.Linear(dec_hidden_dim, n_vocab)
 
+        self.attention = Attention(enc_hidden_dim, dec_hidden_dim)
+
+    def freeze_pretrained(self, freeze):
+        for param in self.emb.parameters():
+            param.requires_grad = not freeze
+
+    def init_emb(self, use_pretrained_emb, word_to_int):
+        emb = nn.Embedding(self.n_vocab, self.embedding_dim)
+        if use_pretrained_emb:
+            print('Loading pretrained word embeddings...')
+
+            # Download pre-trained GloVe embeddings, turn into Word2Vec format
+            glove_file = './data/glove.6B.{}d.txt'.format(self.embedding_dim)
+            word2vec_glove_file = './data/glove.6B.{}d.word2vec.txt'.format(self.embedding_dim)
+            if not os.path.isfile(word2vec_glove_file):
+                glove2word2vec(glove_file, word2vec_glove_file)
+
+            # Load model
+            model = KeyedVectors.load_word2vec_format(word2vec_glove_file)
+
+            # Construct pretrained embeddings according to our vocab
+            # Clone weights so if some word not in glove, they are randomly initialized
+            pretrained_emb = emb.weight.clone().detach()
+            for word, i in word_to_int.items():
+                if word in model:
+                    pretrained_emb[i] = torch.tensor(model[word])
+
+            # Load pretrained embeddings
+            emb.load_state_dict({'weight': pretrained_emb})
+
+            print('Done.')
+        return emb
+
+    def init_hidden_cell_states(self, img_embeddings):
+        # Init hidden and cell states by taking mean of img embedding over all pixels
+        mean_img_embeddings = img_embeddings.mean(dim=1)
+        h = self.enc_to_dec_h(mean_img_embeddings)
+        c = self.enc_to_dec_c(mean_img_embeddings)
+        return h, c
+
     def decode_to_end(self, img_embedding, n_vocab, start_token_idx, end_token_idx, max_seq_len=50, k=1):
-        last_token = start_token_idx
-        caption = [last_token]
-        h = img_embedding
-        c = img_embedding
-        while len(caption) < max_seq_len and last_token != end_token_idx: 
+        # Beam search
+        top_k_captions = [[start_token_idx]] * k
+        top_k_scores = torch.zeros((k, 1))
+        img_embedding = img_embedding.view(1, self.enc_hidden_dim, -1).permute(0, 2, 1)
+        img_embeddings = img_embedding.expand(k, -1, -1)
+        h, c = self.init_hidden_cell_states(img_embeddings)
+
+        seq_t = 0
+        completed_captions = []
+        completed_caption_scores = []
+        while seq_t < max_seq_len and len(top_k_scores) != 0:
+            k = len(top_k_scores)
+
             # Construct input
-            word = torch.tensor([last_token], dtype=torch.long)
-            word_embedding = self.emb(word)
+            last_tokens = [s[-1] for s in top_k_captions]
+            word = torch.tensor(last_tokens, dtype=torch.long)
+            caption_emb = self.emb(word)
 
-            # Predict next character
+            # Predict
             with torch.no_grad():
-                h, c = self.lstm_cell(word_embedding, (h, c))
+                att_img_emb = self.attention(img_embeddings, h)
+                inp = torch.cat([caption_emb, att_img_emb], dim=1) 
+                h, c = self.lstm_cell(inp, (h, c))
                 pred = self.fc(h)
-                prob = F.softmax(pred, dim=1)[0]
+                log_prob = F.log_softmax(pred, dim=1)
 
-            # Pick word based on probability instead of always picking the highest value
-            word_idx = np.random.choice(list(range(n_vocab)), p=prob.numpy())
+            # Expand the seq, pick k seq with best scores
+            total_scores = top_k_scores.expand_as(log_prob) + log_prob
+            top_k_scores, top_k_idx = total_scores.view(-1).topk(k)
 
-            caption.append(word_idx)
-            last_token = word_idx
-        return caption
+            new_top_k_captions = []
+            new_top_k_scores = []
+            for seq_i, idx in enumerate(top_k_idx):
+                idx = idx.item()
+                prev = int(idx / n_vocab)
+                nxt = idx % n_vocab
+                expanded_seq = top_k_captions[prev] + [nxt]
+
+                if nxt == end_token_idx:
+                    completed_captions.append(expanded_seq)
+                    completed_caption_scores.append(top_k_scores[seq_i])
+                else:
+                    new_top_k_captions.append(expanded_seq)
+                    new_top_k_scores.append(top_k_scores[seq_i])
+            top_k_captions = new_top_k_captions
+            top_k_scores = torch.tensor(new_top_k_scores).unsqueeze(1)
+
+            seq_t += 1
+
+        # From all the completed seq, return the one with highest score as result
+        # If no completed seq, return highest in remaining top k captions
+        if len(completed_captions) != 0:
+            max_idx = torch.argmax(torch.tensor(completed_caption_scores)).item()
+            return completed_captions[max_idx.item()]
+        else:
+            max_idx = torch.argmax(top_k_scores.squeeze(1)).item()
+            return top_k_captions[max_idx]
 
     def forward(self, img_embeddings, captions, caption_lengths):
         batch_size = img_embeddings.size(0)
+
+        # Flatten image, then permute dimensions
+        img_embeddings = img_embeddings.view(batch_size, self.enc_hidden_dim, -1).permute(0, 2, 1)
 
         # Sort captions by decreasing lengths, and create embeddings
         caption_lengths, sort_idx = caption_lengths.sort(descending=True)
@@ -89,9 +197,8 @@ class CaptionDecoder(nn.Module):
         caption_lengths = (caption_lengths - 1).tolist()
         max_caption_length = max(caption_lengths)
 
-        # Init hidden states
-        h = self.enc_to_dec_h(img_embeddings)
-        c = self.enc_to_dec_c(img_embeddings)
+        # Init hidden and cell states
+        h, c = self.init_hidden_cell_states(img_embeddings)
 
         # Init prediction as tensor
         predictions = torch.zeros(batch_size, max_caption_length, self.n_vocab).to(self.device)
@@ -102,11 +209,46 @@ class CaptionDecoder(nn.Module):
             batch_size_t = sum([l > t for l in caption_lengths])
 
             # don't decode for captions who already ended
-            x = caption_embeddings[:batch_size_t, t]
+            caption_emb = caption_embeddings[:batch_size_t, t]
+            img_emb = img_embeddings[:batch_size_t]
             h = h[:batch_size_t]
             c = c[:batch_size_t]
 
-            h, c = self.lstm_cell(x, (h, c))
+            # attention
+            att_img_emb = self.attention(img_emb, h)
+
+            # concatenate caption input and attention
+            inp = torch.cat([caption_emb, att_img_emb], dim=1) 
+
+            # decode
+            h, c = self.lstm_cell(inp, (h, c))
             predictions[:batch_size_t, t] = self.fc(self.dropout(h))
 
         return predictions, captions, caption_lengths, sort_idx
+
+class Attention(nn.Module):
+    def __init__(self, encoder_dim, decoder_dim):
+        super(Attention, self).__init__()
+
+        # Need encoder output to be in same dimension as decoder hidden state 
+        self.enc_to_dec_dim = nn.Linear(encoder_dim, decoder_dim)
+
+        # Layers for computing attention scores and weights
+        self.att_scores = nn.Linear(decoder_dim, 1)
+        self.relu = nn.ReLU()
+        self.softmax = nn.Softmax(dim=1)
+
+    def forward(self, encoder_out, decoder_h):
+        # For each pixel in encoder output, map their embedding to the same dimension as decoder hidden state 
+        encoder_emb = self.enc_to_dec_dim(encoder_out)
+
+        # Compute attention scores by associating encoder embeddings for each pixel and decoder hidden state
+        att_scores = self.att_scores(self.relu(encoder_emb + decoder_h.unsqueeze(1)))
+
+        # Compute weights by doing softmax over attention scores of all pixels
+        alpha = self.softmax(att_scores)
+
+        # Weighted attention output
+        attention_output = (encoder_out * alpha).sum(dim=1)
+
+        return attention_output
