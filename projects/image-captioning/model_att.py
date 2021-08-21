@@ -1,6 +1,7 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
+import torchvision.models as models
 import numpy as np
 
 
@@ -33,6 +34,21 @@ class ImageEncoder(nn.Module):
         y = self.max_pool4(torch.relu(self.conv4(y)))
         y = self.dropout(y)
         y = self.max_pool5(torch.relu(self.conv5(y)))
+        return y
+
+class ImageEncoderPretrained(nn.Module):
+    def __init__(self, device):
+        super(ImageEncoderPretrained, self).__init__()
+
+        self.device = device
+
+        # Densenet includes an extra layer for classification, but it's not needed since we only want the embedding
+        densenet = models.densenet161(pretrained=True)
+        modules = list(densenet.children())[:-1]
+        self.densenet = nn.Sequential(*modules)
+
+    def forward(self, imgs):
+        y = self.densenet(imgs)
         return y
 
 class CaptionDecoder(nn.Module):
@@ -138,7 +154,7 @@ class CaptionDecoder(nn.Module):
         max_caption_length = max(caption_lengths)
 
         # Init hidden and cell states
-        h, c = self.init_hidden_cell_states(img_embedding)
+        h, c = self.init_hidden_cell_states(img_embeddings)
 
         # Init prediction as tensor
         predictions = torch.zeros(batch_size, max_caption_length, self.n_vocab).to(self.device)

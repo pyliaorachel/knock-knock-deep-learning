@@ -2,18 +2,23 @@ import csv
 import os
 
 import torch
+import torchvision.transforms as transforms
 from torch.utils.data import Dataset
 from skimage import io
 from skimage.transform import resize
 
 
 class ImageCaptionDataset(Dataset):
-    def __init__(self, img_root, caption_path, img_size=512, seq_len=128):
+    def __init__(self, img_root, caption_path, img_size=512, seq_len=128, should_normalize=False):
         super(ImageCaptionDataset).__init__()
         self.img_root = img_root
         self.caption_path = caption_path
         self.img_size = img_size
         self.seq_len = seq_len
+        # https://pytorch.org/vision/stable/models.html
+        self.should_normalize = should_normalize
+        self.normalize = transforms.Normalize(mean=[0.485, 0.456, 0.406],
+                                              std=[0.229, 0.224, 0.225])
 
         self.parse_data()
 
@@ -59,6 +64,8 @@ class ImageCaptionDataset(Dataset):
         img = torch.from_numpy(img).float()
         img /= 255                  # normalize to range [0, 1]
         img = img.permute(2, 0, 1)  # (w, h, c) -> (c, w, h)
+        if self.should_normalize:
+            img = self.normalize(img)
         return img
 
     def process_captions(self, captions):

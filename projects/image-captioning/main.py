@@ -8,7 +8,7 @@ from torch.nn.utils.rnn import pack_padded_sequence
 import matplotlib.pyplot as plt
 
 from dataset import ImageCaptionDataset
-from model_att import ImageEncoder, CaptionDecoder 
+from model_att import ImageEncoder, ImageEncoderPretrained, CaptionDecoder
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
@@ -22,6 +22,8 @@ def parse_args():
                         help='output encoder model file')
     parser.add_argument('output_decoder', type=str,
                         help='output decoder model file')
+    parser.add_argument('--use-pretrained', action='store_true',
+                        help='use pretrained torchvision models (default: False)')
     parser.add_argument('--batch-size', type=int, default=32,
                         help='training batch size (default: 32)')
     parser.add_argument('--embedding-dim', type=int, default=256,
@@ -120,9 +122,10 @@ def main():
     print('DECODER DROPOUT: {}'.format(args.dec_dropout))
     print('EPOCHS: {}'.format(args.epochs))
     print('LOG_INTERVAL: {}'.format(args.log_interval))
+    print('USE PRETRAINED: {}'.format(args.use_pretrained))
 
     # Prepare data & split
-    dataset = ImageCaptionDataset(args.image_folder, args.caption_path)
+    dataset = ImageCaptionDataset(args.image_folder, args.caption_path, should_normalize=args.use_pretrained)
     train_set_size = int(len(dataset) * 0.8)
     train_set, test_set = random_split(dataset, [train_set_size, len(dataset) - train_set_size])
     train_dataloader = DataLoader(train_set, batch_size=args.batch_size, shuffle=True)
@@ -133,9 +136,14 @@ def main():
     print('----------------------------')
 
     # Create model & optimizer
-    encoder = ImageEncoder(device, dropout=args.enc_dropout).to(device)
+    if args.use_pretrained:
+        encoder = ImageEncoderPretrained(device).to(device)
+        enc_hidden_dim = 2208
+    else:
+        encoder = ImageEncoder(device, dropout=args.enc_dropout).to(device)
+        enc_hidden_dim = 1024
     decoder = CaptionDecoder(device, len(dataset.vocab), embedding_dim=args.embedding_dim,
-                             dec_hidden_dim=args.dec_hidden_dim, dropout=args.dec_dropout).to(device)
+                             enc_hidden_dim=enc_hidden_dim, dec_hidden_dim=args.dec_hidden_dim, dropout=args.dec_dropout).to(device)
     enc_optimizer = torch.optim.Adam(encoder.parameters(), lr=args.lr)
     dec_optimizer = torch.optim.Adam(decoder.parameters(), lr=args.lr)
 
@@ -145,6 +153,8 @@ def main():
     # Save model
     torch.save(encoder.cpu().state_dict(), args.output_encoder)
     torch.save(decoder.cpu().state_dict(), args.output_decoder)
+    encoder.to(device)
+    decoder.to(device)
 
     # Test
     test(encoder, decoder, test_dataloader, args)
