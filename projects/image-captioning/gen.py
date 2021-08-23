@@ -57,22 +57,20 @@ def main():
     args = parse_args()
     
     # Prepare dataset (for vocab) 
-    dataset = ImageCaptionDataset('', args.caption_path)
+    dataset = ImageCaptionDataset('', args.caption_path, use_pretrained=args.use_pretrained)
 
     # Load image
-    img = io.imread(args.image)
-    img = resize(img, (512, 512))
-    img = torch.from_numpy(img).float()
-    img /= 255                  # normalize to range [0, 1]
-    img = img.permute(2, 0, 1)  # (w, h, c) -> (c, w, h)
+    img = dataset.parse_image(args.image)
 
     # Load model
     if args.use_pretrained:
         encoder = ImageEncoderPretrained('cpu')
-        enc_hidden_dim = 2208
+        enc_hidden_dim = 2048
     else:
         encoder = ImageEncoder('cpu')
         enc_hidden_dim = 1024
+
+    # No need to pass use_pretrained to decoder, as the weights will be loaded
     decoder = CaptionDecoder('cpu', len(dataset.vocab), embedding_dim=args.embedding_dim,
                              enc_hidden_dim=enc_hidden_dim, dec_hidden_dim=args.dec_hidden_dim)
     encoder.load_state_dict(torch.load(args.encoder))

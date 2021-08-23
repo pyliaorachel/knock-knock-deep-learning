@@ -51,17 +51,17 @@ class ImageEncoderPretrained(nn.Module):
 
         self.device = device
 
-        # Densenet includes an extra layer for classification, but it's not needed since we only want the embedding
-        densenet = models.densenet161(pretrained=True)
-        modules = list(densenet.children())[:-1]
-        self.densenet = nn.Sequential(*modules)
+        # ResNet includes 2 extra layers for classification, but they're not needed since we only want the embedding
+        resnet = models.resnet50(pretrained=True)
+        modules = list(resnet.children())[:-2]
+        self.net = nn.Sequential(*modules)
 
     def freeze_pretrained(self, freeze):
-        for param in self.densenet.parameters():
+        for param in self.net.parameters():
             param.requires_grad = not freeze
 
     def forward(self, imgs):
-        y = self.densenet(imgs)
+        y = self.net(imgs)
         return y
 
 class CaptionDecoder(nn.Module):
@@ -78,7 +78,7 @@ class CaptionDecoder(nn.Module):
         self.enc_to_dec_c = nn.Linear(enc_hidden_dim, dec_hidden_dim)
 
         self.emb = self.init_emb(use_pretrained_emb, word_to_int)
-        self.lstm_cell = nn.LSTMCell(embedding_dim + enc_hidden_dim, dec_hidden_dim)
+        self.lstm_cell = nn.LSTMCell(embedding_dim + enc_hidden_dim, dec_hidden_dim, bias=True)
         self.dropout = nn.Dropout(dropout)
         self.fc = nn.Linear(dec_hidden_dim, n_vocab)
 
@@ -122,7 +122,7 @@ class CaptionDecoder(nn.Module):
         c = self.enc_to_dec_c(mean_img_embeddings)
         return h, c
 
-    def decode_to_end(self, img_embedding, n_vocab, start_token_idx, end_token_idx, max_seq_len=50, k=1):
+    def decode_to_end(self, img_embedding, n_vocab, start_token_idx, end_token_idx, max_seq_len=40, k=1):
         # Beam search
         top_k_captions = [[start_token_idx]] * k
         top_k_scores = torch.zeros((k, 1))
@@ -130,7 +130,7 @@ class CaptionDecoder(nn.Module):
         img_embeddings = img_embedding.expand(k, -1, -1)
         h, c = self.init_hidden_cell_states(img_embeddings)
 
-        seq_t = 0
+        seq_t = 1
         completed_captions = []
         completed_caption_scores = []
         while seq_t < max_seq_len and len(top_k_scores) != 0:
@@ -163,7 +163,7 @@ class CaptionDecoder(nn.Module):
 
                 if nxt == end_token_idx:
                     completed_captions.append(expanded_seq)
-                    completed_caption_scores.append(top_k_scores[seq_i])
+                    completed_caption_scores.append(top_k_scores[seq_i] / (seq_t+1)) # normalize by seq length
                 else:
                     new_top_k_captions.append(expanded_seq)
                     new_top_k_scores.append(top_k_scores[seq_i])
@@ -193,20 +193,20 @@ class CaptionDecoder(nn.Module):
         captions = captions[sort_idx]
         caption_embeddings = self.emb(captions)
 
-        # Minus 1 in length to avoid decoding at <end> token
-        caption_lengths = (caption_lengths - 1).tolist()
-        max_caption_length = max(caption_lengths)
-
         # Init hidden and cell states
         h, c = self.init_hidden_cell_states(img_embeddings)
 
+        # Minus 1 in length to avoid decoding at <end> token
+        decode_lengths = (caption_lengths - 1).tolist()
+        max_decode_length = max(decode_lengths)
+
         # Init prediction as tensor
-        predictions = torch.zeros(batch_size, max_caption_length, self.n_vocab).to(self.device)
+        predictions = torch.zeros(batch_size, max_decode_length, self.n_vocab).to(self.device)
 
         # Iterate and output each timestep of the captions
-        for t in range(max_caption_length):
+        for t in range(max_decode_length):
             # batch size at this timestep
-            batch_size_t = sum([l > t for l in caption_lengths])
+            batch_size_t = sum([l > t for l in decode_lengths])
 
             # don't decode for captions who already ended
             caption_emb = caption_embeddings[:batch_size_t, t]
@@ -227,26 +227,24 @@ class CaptionDecoder(nn.Module):
         return predictions, captions, caption_lengths, sort_idx
 
 class Attention(nn.Module):
-    def __init__(self, encoder_dim, decoder_dim):
+    def __init__(self, encoder_dim, decoder_dim, attention_dim=256):
         super(Attention, self).__init__()
 
-        # Need encoder output to be in same dimension as decoder hidden state 
-        self.enc_to_dec_dim = nn.Linear(encoder_dim, decoder_dim)
+        self.enc_to_att = nn.Linear(encoder_dim, attention_dim)
+        self.dec_to_att = nn.Linear(decoder_dim, attention_dim)
 
-        # Layers for computing attention scores and weights
-        self.att_scores = nn.Linear(decoder_dim, 1)
-        self.relu = nn.ReLU()
-        self.softmax = nn.Softmax(dim=1)
+        self.att_scores = nn.Linear(attention_dim, 1)
 
     def forward(self, encoder_out, decoder_h):
-        # For each pixel in encoder output, map their embedding to the same dimension as decoder hidden state 
-        encoder_emb = self.enc_to_dec_dim(encoder_out)
+        # Map encoder output and decoder hidden state to attention dimension
+        encoder_att = self.enc_to_att(encoder_out)
+        decoder_att = self.dec_to_att(decoder_h)
 
         # Compute attention scores by associating encoder embeddings for each pixel and decoder hidden state
-        att_scores = self.att_scores(self.relu(encoder_emb + decoder_h.unsqueeze(1)))
+        att_scores = self.att_scores(F.relu(encoder_att + decoder_att.unsqueeze(1)))
 
         # Compute weights by doing softmax over attention scores of all pixels
-        alpha = self.softmax(att_scores)
+        alpha = F.softmax(att_scores, dim=1)
 
         # Weighted attention output
         attention_output = (encoder_out * alpha).sum(dim=1)

@@ -42,13 +42,19 @@ def parse_args():
                         help='number of batches to wait before logging status (default: 10)')
     return parser.parse_args()
 
-def train(encoder, decoder, enc_optimizer, dec_optimizer, data, args):
+def print_caption(token_list, int_to_word):
+    caption = ' '.join([int_to_word[token.item()] for token in token_list])
+    print(caption)
+
+def train(encoder, decoder, enc_optimizer, dec_optimizer, data, dataset, args):
     encoder.train()
     decoder.train()
     encoder.freeze_pretrained(True)
-    decoder.freeze_pretrained(True)
+    #decoder.freeze_pretrained(True)
 
     losses = []
+    pad_token_idx = dataset.word_to_int['<pad>']
+    n_vocab = len(dataset.vocab)
     for epoch in range(args.epochs):
         total_loss = 0
         for batch_i, (imgs, captions, caption_lengths) in enumerate(data):
@@ -56,6 +62,10 @@ def train(encoder, decoder, enc_optimizer, dec_optimizer, data, args):
             imgs = imgs.to(device)
             captions = captions.to(device)
             caption_lengths = caption_lengths.to(device)
+
+            # Strip paddings over max caption length in batch
+            max_caption_length = max(caption_lengths)
+            captions = captions[:, :max_caption_length]
 
             # Forward pass
             enc_optimizer.zero_grad()
@@ -66,12 +76,8 @@ def train(encoder, decoder, enc_optimizer, dec_optimizer, data, args):
             # Prepare target
             targets = captions[:, 1:] # target words are one timestep later
 
-            # Trick to ignore paddings
-            output = pack_padded_sequence(output, caption_lengths, batch_first=True).data
-            targets = pack_padded_sequence(targets, caption_lengths, batch_first=True).data
-
             # Backward pass
-            loss = F.cross_entropy(output, targets)
+            loss = F.cross_entropy(output.view(-1, n_vocab), targets.reshape(-1), ignore_index=pad_token_idx)
             loss.backward()
             enc_optimizer.step()
             dec_optimizer.step()
@@ -80,6 +86,13 @@ def train(encoder, decoder, enc_optimizer, dec_optimizer, data, args):
             total_loss += loss.item()
             if batch_i % args.log_interval == 0:
                 print('Train epoch: {} ({:2.0f}%)\tLoss: {:.6f}'.format(epoch, 100. * batch_i / len(data), loss.item()))
+                print('Caption:')
+                print_caption(captions[0], dataset.int_to_word)
+                print('Target:')
+                print_caption(targets[0], dataset.int_to_word)
+                print('Output:')
+                print_caption(output[0].squeeze(0).argmax(dim=1), dataset.int_to_word)
+
         losses.append(total_loss / len(data))
 
     # Plot
@@ -89,25 +102,28 @@ def train(encoder, decoder, enc_optimizer, dec_optimizer, data, args):
     plt.title('Training loss over epochs')
     plt.savefig('training_loss.png')
 
-def test(encoder, decoder, data, args):
+def test(encoder, decoder, data, dataset, args):
     encoder.eval()
     decoder.eval()
 
     total_loss = 0
+    pad_token_idx = dataset.word_to_int['<pad>']
+    n_vocab = len(dataset.vocab)
     with torch.no_grad():
         for imgs, captions, caption_lengths in data:
             imgs = imgs.to(device)
             captions = captions.to(device)
             caption_lengths = caption_lengths.to(device)
 
+            max_caption_length = max(caption_lengths)
+            captions = captions[:, :max_caption_length]
+
             img_embeddings = encoder(imgs)
             output, captions, caption_lengths, sort_idx = decoder(img_embeddings, captions, caption_lengths)
 
             targets = captions[:, 1:]
-            output = pack_padded_sequence(output, caption_lengths, batch_first=True).data
-            targets = pack_padded_sequence(targets, caption_lengths, batch_first=True).data
 
-            loss = F.cross_entropy(output, targets)
+            loss = F.cross_entropy(output.view(-1, n_vocab), targets.reshape(-1), ignore_index=pad_token_idx)
             total_loss += loss.item()
 
     avg_loss = total_loss / len(data)
@@ -127,7 +143,7 @@ def main():
     print('USE PRETRAINED: {}'.format(args.use_pretrained))
 
     # Prepare data & split
-    dataset = ImageCaptionDataset(args.image_folder, args.caption_path, should_normalize=args.use_pretrained)
+    dataset = ImageCaptionDataset(args.image_folder, args.caption_path, use_pretrained=args.use_pretrained)
     train_set_size = int(len(dataset) * 0.8)
     train_set, test_set = random_split(dataset, [train_set_size, len(dataset) - train_set_size])
     train_dataloader = DataLoader(train_set, batch_size=args.batch_size, shuffle=True)
@@ -140,7 +156,7 @@ def main():
     # Create model & optimizer
     if args.use_pretrained:
         encoder = ImageEncoderPretrained(device).to(device)
-        enc_hidden_dim = 2208
+        enc_hidden_dim = 2048
     else:
         encoder = ImageEncoder(device, dropout=args.enc_dropout).to(device)
         enc_hidden_dim = 1024
@@ -151,7 +167,7 @@ def main():
     dec_optimizer = torch.optim.Adam(decoder.parameters(), lr=args.lr)
 
     # Train
-    train(encoder, decoder, enc_optimizer, dec_optimizer, train_dataloader, args)
+    train(encoder, decoder, enc_optimizer, dec_optimizer, train_dataloader, dataset, args)
 
     # Save model
     torch.save(encoder.cpu().state_dict(), args.output_encoder)
@@ -160,7 +176,7 @@ def main():
     decoder.to(device)
 
     # Test
-    test(encoder, decoder, test_dataloader, args)
+    test(encoder, decoder, test_dataloader, dataset, args)
 
 
 if __name__ == '__main__':
