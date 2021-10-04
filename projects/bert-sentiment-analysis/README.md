@@ -2,8 +2,7 @@
 
 BERT Sentiment Analysis using [huggingface](https://huggingface.co/). 
 
-- Running on [Colab](https://colab.research.google.com/drive/1wyTvlDgREFyuJgRoev2EPnj8fjcyHA__?usp=sharing) (Bert)
-- Running on [Colab](https://colab.research.google.com/drive/1rd4h-bXPWgUYmXqVENB9SF2md9uyWSfb?usp=sharing) (Albert)
+- Albert on [Colab](https://colab.research.google.com/drive/1rd4h-bXPWgUYmXqVENB9SF2md9uyWSfb?usp=sharing)
 
 ## Dataset
 
@@ -11,7 +10,7 @@ Kaggle [Sentiment Analysis on Movie Reviews training set](https://www.kaggle.com
 
 Download and unzip the file, put it under `data/` folder, and name it `data.tsv`.
 
-We reduced the dataset to only keep the original sentence as input (instead of parts of the same sentence), as implemented in `dataset.py`. As a result, there are only 8529 input-output pairs in the dataset we use.
+For Albert, we reduced the dataset to only keep the original sentence as input (instead of parts of the same sentence). As a result, there are only 8529 input-output pairs in the dataset we use.
 
 ## Usage
 
@@ -27,7 +26,7 @@ $ python main.py data/data.tsv output/model.pt
 $ python main.py -h
 ```
 
-## Training Info We Use
+## Training Info & Results
 
 Albert:
 
@@ -42,3 +41,8 @@ LOG_INTERVAL: 10
 Training set size: 6823
 Test set size: 1706
 ```
+
+![](./img/training_loss_albert.png)
+![](./img/training_acc_albert.png)
+
+Test set: Average loss: 1.3279, Accuracy: 795/1706 (47%)
