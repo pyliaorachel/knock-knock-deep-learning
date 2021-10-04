@@ -50,7 +50,7 @@ $ python main.py <image-folder> <caption-file> <output-encoder-file> <output-dec
 $ python gen.py <encoder-file> <decoder-file> <image-file> <caption-file> --use-curriculum-learning
 ```
 
-## Training Info We use
+## Training Info & Results
 
 Base:
 
@@ -70,6 +70,10 @@ Test set size: 8095
 Vocab size: 8922
 ```
 
+![](./img/training_loss_naive_50.png)
+
+[test output](./output/test_output_naive_50.txt)
+
 With pretrained:
 
 ```bash
@@ -88,6 +92,10 @@ Test set size: 8095
 Vocab size: 8922
 ```
 
+![](./img/training_loss_pretrained_50.png)
+
+[test output](./output/test_output_pretrained_50.txt)
+
 With pretrained + curriculum learning:
 
 ```bash
@@ -105,6 +113,10 @@ Training set size: 32360
 Test set size: 8095
 Vocab size: 8922
 ```
+
+![](./img/training_loss_pretrained_curr_50.png)
+
+[test output](./output/test_output_pretrained_curr_50.txt)
 
 ## Reference
 
