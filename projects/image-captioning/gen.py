@@ -6,7 +6,7 @@ import torch.nn.functional as F
 from skimage import io
 from skimage.transform import resize
 
-from model import ImageEncoder, ImageEncoderPretrained, CaptionDecoder 
+from model import ImageEncoder, CaptionDecoder
 from dataset import ImageCaptionDataset
 
 
@@ -57,22 +57,16 @@ def main():
     args = parse_args()
     
     # Prepare dataset (for vocab) 
-    dataset = ImageCaptionDataset('', args.caption_path, use_pretrained=args.use_pretrained)
+    dataset = ImageCaptionDataset('', args.caption_path)
 
     # Load image
     img = dataset.parse_image(args.image)
 
     # Load model
-    if args.use_pretrained:
-        encoder = ImageEncoderPretrained('cpu')
-        enc_hidden_dim = 2048
-    else:
-        encoder = ImageEncoder('cpu')
-        enc_hidden_dim = 1024
-
-    # No need to pass use_pretrained to decoder, as the weights will be loaded
+    encoder = ImageEncoder('cpu', pretrained=args.use_pretrained)
     decoder = CaptionDecoder('cpu', len(dataset.vocab), embedding_dim=args.embedding_dim,
-                             enc_hidden_dim=enc_hidden_dim, dec_hidden_dim=args.dec_hidden_dim)
+                             enc_hidden_dim=encoder.hidden_dim, dec_hidden_dim=args.dec_hidden_dim,
+                             word_to_int=dataset.word_to_int)
     encoder.load_state_dict(torch.load(args.encoder))
     decoder.load_state_dict(torch.load(args.decoder))
 

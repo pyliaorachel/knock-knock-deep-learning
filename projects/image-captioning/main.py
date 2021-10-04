@@ -1,4 +1,5 @@
 import argparse
+import math
 
 import torch
 import torch.nn as nn
@@ -8,7 +9,7 @@ from torch.nn.utils.rnn import pack_padded_sequence
 import matplotlib.pyplot as plt
 
 from dataset import ImageCaptionDataset
-from model import ImageEncoder, ImageEncoderPretrained, CaptionDecoder
+from model import ImageEncoder, CaptionDecoder
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
@@ -22,6 +23,8 @@ def parse_args():
                         help='output encoder model file')
     parser.add_argument('output_decoder', type=str,
                         help='output decoder model file')
+    parser.add_argument('--use-curriculum-learning', action='store_true',
+                        help='use curriculum learning (default: False)')
     parser.add_argument('--use-pretrained', action='store_true',
                         help='use pretrained torchvision models (default: False)')
     parser.add_argument('--batch-size', type=int, default=32,
@@ -49,15 +52,24 @@ def print_caption(token_list, int_to_word):
 def train(encoder, decoder, enc_optimizer, dec_optimizer, data, dataset, args):
     encoder.train()
     decoder.train()
-    encoder.freeze_pretrained(True)
+    encoder.freeze_pretrained(args.use_pretrained)
     #decoder.freeze_pretrained(True)
 
     losses = []
+    epsilon = 1 # curriculum learning
+    epsilons = []
     pad_token_idx = dataset.word_to_int['<pad>']
     n_vocab = len(dataset.vocab)
+    total_iters = args.epochs * len(data)
     for epoch in range(args.epochs):
         total_loss = 0
-        for batch_i, (imgs, captions, caption_lengths) in enumerate(data):
+        for batch_i, (imgs, captions, caption_lengths, _) in enumerate(data):
+            # Decay teacher forcing for curriculum learning
+            if args.use_curriculum_learning:
+                i = epoch * len(data) + batch_i
+                epsilon = 1 - 2 / (math.exp(10 * (1 - (i+1)/total_iters)) + 1)
+                epsilons.append(epsilon)
+
             # Bring data to device
             imgs = imgs.to(device)
             captions = captions.to(device)
@@ -71,7 +83,7 @@ def train(encoder, decoder, enc_optimizer, dec_optimizer, data, dataset, args):
             enc_optimizer.zero_grad()
             dec_optimizer.zero_grad()
             img_embeddings = encoder(imgs)
-            output, captions, caption_lengths, sort_idx = decoder(img_embeddings, captions, caption_lengths)
+            output, captions, caption_lengths, sort_idx = decoder(img_embeddings, captions, caption_lengths, epsilon=epsilon)
 
             # Prepare target
             targets = captions[:, 1:] # target words are one timestep later
@@ -95,6 +107,14 @@ def train(encoder, decoder, enc_optimizer, dec_optimizer, data, dataset, args):
 
         losses.append(total_loss / len(data))
 
+    if args.use_curriculum_learning:
+        plt.plot(list(range(total_iters)), epsilons)
+        plt.xlabel('Iterations')
+        plt.ylabel('Epsilon')
+        plt.title('Teacher forcing decay over epochs')
+        plt.savefig('curriculum_learning.png')
+        plt.clf()
+
     # Plot
     plt.plot(list(range(args.epochs)), losses)
     plt.xlabel('Epochs')
@@ -107,10 +127,11 @@ def test(encoder, decoder, data, dataset, args):
     decoder.eval()
 
     total_loss = 0
+    total_loss_no_tf = 0
     pad_token_idx = dataset.word_to_int['<pad>']
     n_vocab = len(dataset.vocab)
     with torch.no_grad():
-        for imgs, captions, caption_lengths in data:
+        for imgs, captions, caption_lengths, img_files in data:
             imgs = imgs.to(device)
             captions = captions.to(device)
             caption_lengths = caption_lengths.to(device)
@@ -119,15 +140,26 @@ def test(encoder, decoder, data, dataset, args):
             captions = captions[:, :max_caption_length]
 
             img_embeddings = encoder(imgs)
-            output, captions, caption_lengths, sort_idx = decoder(img_embeddings, captions, caption_lengths)
+            # Teacher forcing
+            output, _, _, sort_idx = decoder(img_embeddings, captions, caption_lengths)
+            # No teacher forcing
+            output_no_tf, _, _, sort_idx = decoder(img_embeddings, captions, caption_lengths, epsilon=0)
+
+            captions = captions[sort_idx]
+            caption_lengths = caption_lengths[sort_idx]
 
             targets = captions[:, 1:]
 
             loss = F.cross_entropy(output.view(-1, n_vocab), targets.reshape(-1), ignore_index=pad_token_idx)
+            loss_no_tf = F.cross_entropy(output_no_tf.view(-1, n_vocab), targets.reshape(-1), ignore_index=pad_token_idx)
+
             total_loss += loss.item()
+            total_loss_no_tf += loss_no_tf.item()
 
     avg_loss = total_loss / len(data)
+    avg_loss_no_tf = total_loss_no_tf / len(data)
     print('Test Loss: {:.6f}'.format(avg_loss))
+    print('Test Loss (no teacher forcing): {:.6f}'.format(avg_loss_no_tf))
 
 def main():
     args = parse_args()
@@ -141,11 +173,11 @@ def main():
     print('EPOCHS: {}'.format(args.epochs))
     print('LOG_INTERVAL: {}'.format(args.log_interval))
     print('USE PRETRAINED: {}'.format(args.use_pretrained))
+    print('USE CURRICULUM LEARNING: {}'.format(args.use_curriculum_learning))
 
     # Prepare data & split
-    dataset = ImageCaptionDataset(args.image_folder, args.caption_path, use_pretrained=args.use_pretrained)
-    train_set_size = int(len(dataset) * 0.8)
-    train_set, test_set = random_split(dataset, [train_set_size, len(dataset) - train_set_size])
+    dataset = ImageCaptionDataset(args.image_folder, args.caption_path)
+    train_set, test_set = dataset.random_split(train_portion=0.8)
     train_dataloader = DataLoader(train_set, batch_size=args.batch_size, shuffle=True)
     test_dataloader = DataLoader(test_set, batch_size=args.batch_size)
     print('Training set size: {}'.format(len(train_set)))
@@ -154,14 +186,9 @@ def main():
     print('----------------------------')
 
     # Create model & optimizer
-    if args.use_pretrained:
-        encoder = ImageEncoderPretrained(device).to(device)
-        enc_hidden_dim = 2048
-    else:
-        encoder = ImageEncoder(device, dropout=args.enc_dropout).to(device)
-        enc_hidden_dim = 1024
+    encoder = ImageEncoder(device, pretrained=args.use_pretrained).to(device)
     decoder = CaptionDecoder(device, len(dataset.vocab), embedding_dim=args.embedding_dim,
-                             enc_hidden_dim=enc_hidden_dim, dec_hidden_dim=args.dec_hidden_dim, dropout=args.dec_dropout,
+                             enc_hidden_dim=encoder.hidden_dim, dec_hidden_dim=args.dec_hidden_dim, dropout=args.dec_dropout,
                              use_pretrained_emb=args.use_pretrained, word_to_int=dataset.word_to_int).to(device)
     enc_optimizer = torch.optim.Adam(encoder.parameters(), lr=args.lr)
     dec_optimizer = torch.optim.Adam(decoder.parameters(), lr=args.lr)

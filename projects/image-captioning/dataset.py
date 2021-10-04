@@ -1,14 +1,16 @@
 import csv
 import os
+from collections import defaultdict
 
 import torch
 import torchvision.transforms as transforms
-from torch.utils.data import Dataset
+from torch.utils.data import Dataset, Subset
+from torch import randperm
 from PIL import Image
 
 
 class ImageCaptionDataset(Dataset):
-    def __init__(self, img_root, caption_path, img_size=512, seq_len=40, use_pretrained=False):
+    def __init__(self, img_root, caption_path, img_size=256, seq_len=40):
         super(ImageCaptionDataset).__init__()
         self.img_root = img_root
         self.caption_path = caption_path
@@ -16,7 +18,6 @@ class ImageCaptionDataset(Dataset):
         self.seq_len = seq_len
 
         # https://pytorch.org/vision/stable/models.html
-        self.use_pretrained = use_pretrained
         self.transforms = transforms.Compose([
                                 transforms.Resize(256),
                                 transforms.CenterCrop(224),
@@ -30,11 +31,12 @@ class ImageCaptionDataset(Dataset):
         return self.n
 
     def __getitem__(self, i):
-        img = self.parse_image(self.img_files[i])
+        img_file = self.img_files[i]
+        img = self.parse_image(img_file)
         caption_list = self.caption_list[i]
         caption_lengths = self.caption_lengths[i]
         caption = ' '.join([self.int_to_word[token.item()] for token in caption_list])
-        return img, caption_list, caption_lengths
+        return img, caption_list, caption_lengths, img_file
 
     def parse_data(self):
         img_files, captions = [], [] 
@@ -52,6 +54,11 @@ class ImageCaptionDataset(Dataset):
         self.caption_list = caption_list
         self.caption_lengths = caption_lengths
         self.n = len(caption_list)
+
+        # Map image file to list of captions
+        self.img_file_to_idx = defaultdict(list)
+        for i, img_file in enumerate(self.img_files):
+            self.img_file_to_idx[img_file].append(i)
 
     def parse_image(self, img_file):
         """
@@ -79,6 +86,7 @@ class ImageCaptionDataset(Dataset):
         # Build vocabulary
         words = [set(caption.split(' ')) for caption in captions]
         vocab = vocab.union(set.union(*words))
+        vocab = list(sorted(vocab))
 
         # Map word to int / int to word
         word_to_int = dict((w, i) for i, w in enumerate(vocab))
@@ -102,3 +110,24 @@ class ImageCaptionDataset(Dataset):
         self.word_to_int, self.int_to_word, self.vocab = word_to_int, int_to_word, vocab
 
         return caption_list, caption_lengths
+
+    def random_split(self, train_portion=0.8, seed=42):
+        """
+        Because we don't want the same image with different captionsto appear in both train and test sets,
+        define a random split function that splits on image files.
+        """
+        img_files = list(set(self.img_files))
+        n_images = len(img_files)
+        train_set_n_images = int(n_images * 0.8)
+        test_set_n_images = n_images - train_set_n_images
+
+        img_idx = randperm(n_images, generator=torch.Generator().manual_seed(seed)).tolist()
+
+        train_img_idx, test_img_idx = img_idx[:train_set_n_images], img_idx[train_set_n_images:]
+        train_idx = [j for i in train_img_idx for j in self.img_file_to_idx[img_files[i]]]
+        test_idx = [j for i in test_img_idx for j in self.img_file_to_idx[img_files[i]]]
+
+        train_set = Subset(self, train_idx)
+        test_set = Subset(self, test_idx)
+
+        return train_set, test_set

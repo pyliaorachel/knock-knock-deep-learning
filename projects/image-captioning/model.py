@@ -11,50 +11,17 @@ from gensim.scripts.glove2word2vec import glove2word2vec
 
 
 class ImageEncoder(nn.Module):
-    def __init__(self, device, dropout=0.2):
+    def __init__(self, device, pretrained=False):
         super(ImageEncoder, self).__init__()
 
         self.device = device
 
-        self.conv1 = nn.Conv2d(3, 64, 3)
-        self.max_pool1 = nn.MaxPool2d(2)
-        self.conv2 = nn.Conv2d(64, 128, 3)
-        self.max_pool2 = nn.MaxPool2d(2)
-        self.conv3 = nn.Conv2d(128, 256, 3)
-        self.max_pool3 = nn.MaxPool2d(2)
-        self.conv4 = nn.Conv2d(256, 512, 3)
-        self.max_pool4 = nn.MaxPool2d(2)
-        self.conv5 = nn.Conv2d(512, 1024, 3)
-        self.max_pool5 = nn.MaxPool2d(2)
-
-        self.dropout = nn.Dropout2d(dropout)
-
-    def freeze_pretrained(self, freeze):
-        # No pretrained model
-        pass
-
-    def forward(self, imgs):
-        y = self.max_pool1(torch.relu(self.conv1(imgs)))
-        y = self.dropout(y)
-        y = self.max_pool2(torch.relu(self.conv2(y)))
-        y = self.dropout(y)
-        y = self.max_pool3(torch.relu(self.conv3(y)))
-        y = self.dropout(y)
-        y = self.max_pool4(torch.relu(self.conv4(y)))
-        y = self.dropout(y)
-        y = self.max_pool5(torch.relu(self.conv5(y)))
-        return y
-
-class ImageEncoderPretrained(nn.Module):
-    def __init__(self, device):
-        super(ImageEncoderPretrained, self).__init__()
-
-        self.device = device
-
         # ResNet includes 2 extra layers for classification, but they're not needed since we only want the embedding
-        resnet = models.resnet50(pretrained=True)
+        resnet = models.resnet50(pretrained=pretrained)
         modules = list(resnet.children())[:-2]
         self.net = nn.Sequential(*modules)
+
+        self.hidden_dim = 2048
 
     def freeze_pretrained(self, freeze):
         for param in self.net.parameters():
@@ -65,7 +32,7 @@ class ImageEncoderPretrained(nn.Module):
         return y
 
 class CaptionDecoder(nn.Module):
-    def __init__(self, device, n_vocab, embedding_dim=256, enc_hidden_dim=1024, dec_hidden_dim=256, dropout=0.2, use_pretrained_emb=False, word_to_int=None):
+    def __init__(self, device, n_vocab, embedding_dim=256, enc_hidden_dim=2048, dec_hidden_dim=256, att_dim=256, dropout=0.2, use_pretrained_emb=False, word_to_int=None):
         super(CaptionDecoder, self).__init__()
 
         self.device = device
@@ -82,7 +49,7 @@ class CaptionDecoder(nn.Module):
         self.dropout = nn.Dropout(dropout)
         self.fc = nn.Linear(dec_hidden_dim, n_vocab)
 
-        self.attention = Attention(enc_hidden_dim, dec_hidden_dim)
+        self.attention = Attention(enc_hidden_dim, dec_hidden_dim, attention_dim=att_dim)
 
     def freeze_pretrained(self, freeze):
         for param in self.emb.parameters():
@@ -181,7 +148,7 @@ class CaptionDecoder(nn.Module):
             max_idx = torch.argmax(top_k_scores.squeeze(1)).item()
             return top_k_captions[max_idx]
 
-    def forward(self, img_embeddings, captions, caption_lengths):
+    def forward(self, img_embeddings, captions, caption_lengths, epsilon=1):
         batch_size = img_embeddings.size(0)
 
         # Flatten image, then permute dimensions
@@ -205,22 +172,28 @@ class CaptionDecoder(nn.Module):
 
         # Iterate and output each timestep of the captions
         for t in range(max_decode_length):
-            # batch size at this timestep
+            # Batch size at this timestep
             batch_size_t = sum([l > t for l in decode_lengths])
 
-            # don't decode for captions who already ended
-            caption_emb = caption_embeddings[:batch_size_t, t]
+            # Don't decode for captions who already ended
             img_emb = img_embeddings[:batch_size_t]
             h = h[:batch_size_t]
             c = c[:batch_size_t]
 
-            # attention
+            # Curriculum learning: prob of epsilon using real target as next timestep's input, (1-epsilon) choosing the best from previous output
+            if t != 0 and np.random.random_sample() >= epsilon:
+                last_tokens = torch.argmax(predictions[:batch_size_t, t-1], dim=1)
+                caption_emb = self.emb(last_tokens)
+            else:
+                caption_emb = caption_embeddings[:batch_size_t, t]
+
+            # Attention
             att_img_emb = self.attention(img_emb, h)
 
-            # concatenate caption input and attention
+            # Concatenate caption input and attention
             inp = torch.cat([caption_emb, att_img_emb], dim=1) 
 
-            # decode
+            # Decode
             h, c = self.lstm_cell(inp, (h, c))
             predictions[:batch_size_t, t] = self.fc(self.dropout(h))
 
