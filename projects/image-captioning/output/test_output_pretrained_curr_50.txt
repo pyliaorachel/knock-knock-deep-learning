@@ -1,0 +1,160 @@
+============================================= 130211457_be3f6b335d.jpg
+Caption:<start> a girl in a red and black leotard with white writing is standing next to a man in a cap and a girl in a hot pink and black and white checkered outfit . <end>
+Target:a girl in a red and black leotard with white writing is standing next to a man in a cap and a girl in a hot pink and black and white checkered outfit . <end>
+Output:a girls in a red red and and . . <end> . <end> . to a <end> . <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end>
+Output (no teacher forcing):a girls in red red and and . <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end>
+============================================= 1130017585_1a219257ac.jpg
+Caption:<start> there are three young people , one dark haired holding a bottled drink , one with head tilted back and finger in her mouth , and one with spiked hair . <end>
+Target:there are three young people , one dark haired holding a bottled drink , one with head tilted back and finger in her mouth , and one with spiked hair . <end>
+Output:a is a young are with a a hair woman a . . . <end> <end> <end> <end> . . <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> . <end>
+Output (no teacher forcing):a young boy a a a a a a . <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end>
+============================================= 2107838729_a527e434bd.jpg
+Caption:<start> a boy in a blue shirt and white pants stands on the edge of a lake in a town with a church in the background . <end>
+Target:a boy in a blue shirt and white pants stands on the edge of a lake in a town with a church in the background . <end>
+Output:a boy boy a a a is a a a in a . . <end> <end> <end> <end> <end> . <end> <end> . <end> <end> <end> <end>
+Output (no teacher forcing):a boy boy a a a a a a the . <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end>
+============================================= 3060969260_08f43e4f4f.jpg
+Caption:<start> the bike rider runs with his red bike while another gains on him , both wearing green outfits and black helmets . <end>
+Target:the bike rider runs with his red bike while another gains on him , both wearing green outfits and black helmets . <end>
+Output:a man is is a a bike . . the . . . . <end> . . . . <end> . . <end>
+Output (no teacher forcing):a man in a a and a a a . <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end>
+============================================= 3459570613_3932816d3f.jpg
+Caption:<start> three little kids on a swing set ; one is upside down , one hanging from the top bar , and on a swing . <end>
+Target:three little kids on a swing set ; one is upside down , one hanging from the top bar , and on a swing . <end>
+Output:a children in playing a a . . a is a down . <end> . off . . . <end> <end> <end> . <end> <end> <end>
+Output (no teacher forcing):a group of children in in the swing . <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end>
+============================================= 2449552677_ee78f01bae.jpg
+Caption:<start> a person with a brown hat and black jacket is in a wheelchair crossing in front of a sign that says " park " . <end>
+Target:a person with a brown hat and black jacket is in a wheelchair crossing in front of a sign that says " park " . <end>
+Output:a man is a a is is a a a a a a . a a of <end> . . <end> <end> <end> <end> <end> <end>
+Output (no teacher forcing):a man is a a a a a a a a . <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end>
+============================================= 2302747917_aa0300eb68.jpg
+Caption:<start> a girl in green is running behind a boy in red in a sports arena whilst a girl in pink is running in the background . <end>
+Target:a girl in green is running behind a boy in red in a sports arena whilst a girl in pink is running in the background . <end>
+Output:a boy in a a running a a <end> . <end> <end> . . <end> . <end> <end> <end> <end> . <end> <end> <end> <end> . <end>
+Output (no teacher forcing):a boy in a red shirt running running a . . <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end>
+============================================= 3533145793_5d69f72e41.jpg
+Caption:<start> a group of young girls are standing in a circle on brightly colored retangular sheets on the grassy ground with their hands in the air . <end>
+Target:a group of young girls are standing in a circle on brightly colored retangular sheets on the grassy ground with their hands in the air . <end>
+Output:a girl of children children in a in a . . <end> a . . <end> <end> <end> . <end> <end> . . <end> <end> . <end>
+Output (no teacher forcing):a girl girl a a a a a a a a . <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end>
+============================================= 3532539748_795d16ef07.jpg
+Caption:<start> a man wearing a hat is standing next to a young boy wearing a black jacket and another smaller child wearing a yellow jacket . <end>
+Target:a man wearing a hat is standing next to a young boy wearing a black jacket and another smaller child wearing a yellow jacket . <end>
+Output:a man and a a and a a to a a man <end> a . . <end> <end> <end> . . <end> <end> . <end> <end>
+Output (no teacher forcing):a man and a a a a a a . <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end>
+============================================= 3484841598_e26ee96aab.jpg
+Caption:<start> a catcher in a black uniform on the ground with his glove upraised during a baseball game , while a man un a white uniform keeps a foot on the base . <end>
+Target:a catcher in a black uniform on the ground with his glove upraised during a baseball game , while a man un a white uniform keeps a foot on the base . <end>
+Output:a baseball in a a baseball . . <end> . <end> . . . . <end> <end> . <end> <end> <end> . <end> <end> <end> <end> <end> <end> . <end> <end> <end> <end>
+Output (no teacher forcing):a baseball in a a baseball . <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end>
+============================================= 3701226275_952547ba0f.jpg
+Caption:<start> a young man holds a hammer shaped object in the air with one hand and a similar shaped object in the other while making a funny expression . <end>
+Target:a young man holds a hammer shaped object in the air with one hand and a similar shaped object in the other while making a funny expression . <end>
+Output:a young boy a a a a a a a . . <end> . . <end> <end> <end> <end> . <end> <end> <end> <end> a . . . <end>
+Output (no teacher forcing):a young boy a a a a a a . . <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end>
+============================================= 3322443827_a04a94bb91.jpg
+Caption:<start> a well-groomed young man wearing dark trousers and a military-style jacket takes a puff from a cigarette in his left hand while holding a cup in his right hand . <end>
+Target:a well-groomed young man wearing dark trousers and a military-style jacket takes a puff from a cigarette in his left hand while holding a cup in his right hand . <end>
+Output:a man man in a a hair is a a . <end> a . . <end> <end> . <end> <end> . <end> <end> a . . <end> <end> . <end> <end>
+Output (no teacher forcing):a man in a a a a a a a a . <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end>
+============================================= 405051459_3b3a3ba5b3.jpg
+Caption:<start> a woman standing by a car in a garage dressed for winter weather in a red knit scarf , black gloves and hat and red handbag . <end>
+Target:a woman standing by a car in a garage dressed for winter weather in a red knit scarf , black gloves and hat and red handbag . <end>
+Output:a woman in in a black a a <end> . in . . . <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end>
+Output (no teacher forcing):a woman in a black coat is a a a . <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end>
+============================================= 3458559770_12cf9f134e.jpg
+Caption:<start> person in blue jacket on a bike on a dirt course with people looking from behind a red and white barrier . <end>
+Target:person in blue jacket on a bike on a dirt course with people looking from behind a red and white barrier . <end>
+Output:a in in racing riding riding . . . . . . <end> . <end> . <end> <end> <end> <end> <end> <end> <end>
+Output (no teacher forcing):a man in a a a . . <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end>
+============================================= 3695517194_2a6b604cb2.jpg
+Caption:<start> a black soccer male soccer player in a purple uniform with a soccer ball on his head , and a white male soccer player in a white uniform behind him . <end>
+Target:a black soccer male soccer player in a purple uniform with a soccer ball on his head , and a white male soccer player in a white uniform behind him . <end>
+Output:a young boy player wearing on a the <end> shirt <end> a <end> . . <end> . . one <end> <end> <end> <end> . <end> <end> <end> <end> <end> him <end> <end>
+Output (no teacher forcing):a young in a blue shirt is on the the . <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end>
+============================================= 656260720_a7db4ce48b.jpg
+Caption:<start> a young girl is wearing a blue patterned swimsuit , a black and yellow swim cap and has blue swim goggles on her head . <end>
+Target:a young girl is wearing a blue patterned swimsuit , a black and yellow swim cap and has blue swim goggles on her head . <end>
+Output:two swimmer wearing wearing a goggles and and and <end> and <end> <end> <end> <end> <end> <end> <end> a <end> . <end> <end> <end> . <end>
+Output (no teacher forcing):two women wearing a goggles and and <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end>
+============================================= 255330891_86d65dfdbf.jpg
+Caption:<start> the man is walking a white dog with one hand whilst resting his other hand on the shoulder of the woman with the pink backpack . <end>
+Target:the man is walking a white dog with one hand whilst resting his other hand on the shoulder of the woman with the pink backpack . <end>
+Output:a small in a a a a a a a a a a . . . <end> <end> . <end> <end> . <end> white <end> <end> <end>
+Output (no teacher forcing):a small girl in a a a a a sidewalk sidewalk a <end> . <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end>
+============================================= 2887744223_029f2fd5fe.jpg
+Caption:<start> a soccer player in white attacks the ball with flying kick towards the goal of the player in red as another team member looks on . <end>
+Target:a soccer player in white attacks the ball with flying kick towards the goal of the player in red as another team member looks on . <end>
+Output:a man is is the a a a a a . . the . . <end> <end> <end> <end> <end> the . . <end> at . <end>
+Output (no teacher forcing):a man is on a a a a a a <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end>
+============================================= 506808265_fe84ada926.jpg
+Caption:<start> a lady with red hair is standing in front of a mixing table with another person behind her holding up their hands . <end>
+Target:a lady with red hair is standing in front of a mixing table with another person behind her holding up their hands . <end>
+Output:two woman in a hair is standing in a of a <end> <end> <end> <end> <end> <end> them . . . . . <end>
+Output (no teacher forcing):two women in in a in a a a . <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end>
+============================================= 2490863987_715383944a.jpg
+Caption:<start> a man holds a sign outside a hotel that reads " ok ok ok , i need money for beer , pot and a hooker . " <end>
+Target:a man holds a sign outside a hotel that reads " ok ok ok , i need money for beer , pot and a hooker . " <end>
+Output:a man in a sign sign a sign sign says a sign sign sign sign sign sign . . . . . . <end> . . <end> <end>
+Output (no teacher forcing):a man in a sign sign sign sign sign sign sign sign . <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end>
+============================================= 2537119659_fa01dd5de5.jpg
+Caption:<start> a little girl with black sunglasses drives a 4x4 red jeep while a little boy stands in the background dressed in blue . <end>
+Target:a little girl with black sunglasses drives a 4x4 red jeep while a little boy stands in the background dressed in blue . <end>
+Output:two young and in a on on on a . <end> a a on on on on a <end> . <end> <end> . <end>
+Output (no teacher forcing):two children are in a a a a <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end>
+============================================= 3529721084_4b405baf54.jpg
+Caption:<start> a leather clad biker wearing face-paint sits on his motorcycle next to another biker who is standing beside his bike on a city street . <end>
+Target:a leather clad biker wearing face-paint sits on his motorcycle next to another biker who is standing beside his bike on a city street . <end>
+Output:a man motorcycle a is a a on a . . to a . . <end> <end> <end> <end> . . <end> <end> . <end> <end>
+Output (no teacher forcing):a man in a a a street street . <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end>
+============================================= 3583321426_f373c52161.jpg
+Caption:<start> a woman wearing a long green dress and scarves on her head holding a pack of cigarettes and a carton of winston cigarettes by a stone structure . <end>
+Target:a woman wearing a long green dress and scarves on her head holding a pack of cigarettes and a carton of winston cigarettes by a stone structure . <end>
+Output:a man in a a clothing is is a a a . . a . . <end> . <end> . <end> <end> . . <end> . . . <end>
+Output (no teacher forcing):a man in a a a a a a . <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end>
+============================================= 2701042060_92508ea8fa.jpg
+Caption:<start> a black dog is drinking next to a brown and white dog that is looking at an orange ball in the lake , whilst a horse and rider passes behind . <end>
+Target:a black dog is drinking next to a brown and white dog that is looking at an orange ball in the lake , whilst a horse and rider passes behind . <end>
+Output:a dogs and playing playing a to a a dog . dog <end> is <end> back . <end> . <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> . <end>
+Output (no teacher forcing):a dogs and playing a a . . <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end>
+============================================= 3446191973_1db572ed8a.jpg
+Caption:<start> people stand on the edge of a waterway striped with red and white where a large wall looms in the background . <end>
+Target:people stand on the edge of a waterway striped with red and white where a large wall looms in the background . <end>
+Output:a group in a children of a a . <end> . . . <end> <end> <end> . . <end> <end> <end> <end> <end>
+Output (no teacher forcing):a group of children children and and a . . <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end>
+============================================= 2540884723_03d60ef548.jpg
+Caption:<start> a woman wearing a pink jacket sitting on a staircase with a man wearing a grey hat sitting a few steps behind . <end>
+Target:a woman wearing a pink jacket sitting on a staircase with a man wearing a grey hat sitting a few steps behind . <end>
+Output:a man sits a a on on on a a . a a . a . <end> <end> on . . . <end> <end>
+Output (no teacher forcing):a man in a a a on a a a a . <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end>
+============================================= 2502007071_82a8c639cf.jpg
+Caption:<start> a man in stripes , a woman in sunglasses , and a child in a blue hat in front of a brick building . <end>
+Target:a man in stripes , a woman in sunglasses , and a child in a blue hat in front of a brick building . <end>
+Output:two young and a and and a a a a a a a in . <end> . <end> <end> . <end> <end> <end> <end> <end>
+Output (no teacher forcing):two young in a a a a a a a a a . <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end>
+============================================= 1329832826_432538d331.jpg
+Caption:<start> this is a picture of a broadway rite aid pharmacy that has a bright neon sign and people are prepared to cross the street in front of it . <end>
+Target:this is a picture of a broadway rite aid pharmacy that has a bright neon sign and people are prepared to cross the street in front of it . <end>
+Output:a man is a a a a a a a . <end> a . . . . <end> . <end> . . . <end> <end> <end> <end> <end> . <end>
+Output (no teacher forcing):a man in a a a a a a a . <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end>
+============================================= 2420730259_86e7f8a815.jpg
+Caption:<start> a man wearing a green shirt is trying to comfort his crying child by holding the child and giving him a kiss on the cheek . <end>
+Target:a man wearing a green shirt is trying to comfort his crying child by holding the child and giving him a kiss on the cheek . <end>
+Output:a man in a a a a a to a a . . <end> <end> a . . <end> <end> . <end> <end> <end> <end> . <end>
+Output (no teacher forcing):a man in a a a a a a a a crowd . <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end>
+============================================= 256439287_990ac4a761.jpg
+Caption:<start> a woman is pushing a man in a wheelchair toward the camera on a brick street while other people are passing behind them . <end>
+Target:a woman is pushing a man in a wheelchair toward the camera on a brick street while other people are passing behind them . <end>
+Output:a man with a a woman in a a . a . . <end> <end> <end> <end> <end> <end> . <end> . . . <end>
+Output (no teacher forcing):a man is a a a a a a a . <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end>
+============================================= 3016521240_2ef20834b6.jpg
+Caption:<start> two women sitting on a bench , their faces obscured , with one woman carrying an inflatable tiger and the other woman in a disney snow white costume . <end>
+Target:two women sitting on a bench , their faces obscured , with one woman carrying an inflatable tiger and the other woman in a disney snow white costume . <end>
+Output:a young in a a a a one a . . one a . . a adult . . <end> <end> . <end> <end> <end> . <end> <end> <end> <end>
+Output (no teacher forcing):a child in a a a a a a a <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end>
+============================================= 3234719720_5bb2fc5ffa.jpg
+Caption:<start> a dark haired bearded man in a white dress shirt and black sweater and a woman in a black and white dress in a small space . <end>
+Target:a dark haired bearded man in a white dress shirt and black sweater and a woman in a black and white dress in a small space . <end>
+Output:a woman woman woman woman in black black shirt a a <end> . . <end> <end> . <end> <end> <end> <end> <end> <end> <end> <end> <end> . <end>
+Output (no teacher forcing):a woman in a black and black a a a a . <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end> <end>

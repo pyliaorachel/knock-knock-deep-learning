@@ -1,0 +1,635 @@
+============================================= 2338627102_6708a9b4fd.jpg
+Caption:<start> a man wearing jeans and a hooded , long sleeved top , and a backpack , walks in a desert . <end>
+Target:a man wearing jeans and a hooded , long sleeved top , and a backpack , walks in a desert . <end>
+Output:a woman with a and a black jacket red hair shirt and and a backpack walks is in front wooded . <end>
+Output (no teacher forcing):a woman in a black shirt and jeans stands in a marsh on the beach . <end> <end> . <end> . <end>
+============================================= 1262454669_f1caafec2d.jpg
+Caption:<start> a woman is sitting on a bench with a latte in her lap and a white dog on a blue leash to her side . <end>
+Target:a woman is sitting on a bench with a latte in her lap and a white dog on a blue leash to her side . <end>
+Output:a man is sitting in the swing in her child in the hand . a young hat . it hat chair . it . . <end>
+Output (no teacher forcing):a man is sitting in front of a bench while another child stands beside him . <end> <end> . <end> <end> is <end> out his tongue
+============================================= 2884400562_e0851014fc.jpg
+Caption:<start> a man with a heavy-metal hairstyle wearing a studded leather jacket and tight lace-up pants stands in front of a brick wall . <end>
+Target:a man with a heavy-metal hairstyle wearing a studded leather jacket and tight lace-up pants stands in front of a brick wall . <end>
+Output:a group and sunglasses yellow shirt is a white shirt shirt is a a to is next a of a brick building . <end>
+Output (no teacher forcing):a group of people are gathered to music in a store . <end> <end> . <end> <end> . <end> <end> . <end> <end> .
+============================================= 493621130_152bdd4e91.jpg
+Caption:<start> a light brown dog with his tail in the air jumps of a pontoon toward the water . <end>
+Target:a light brown dog with his tail in the air jumps of a pontoon toward the water . <end>
+Output:a dog brown dog is a mouth runs mouth air by into water body <end> <end> ocean <end> <end>
+Output (no teacher forcing):a dog is running through the water 's edge . <end> <end> . <end> . <end> <end> . <end>
+============================================= 2640153227_57cf1a3d92.jpg
+Caption:<start> a young girl with blond hair and blue eyes is eating a cookie with one hand while holding another cookie in the other . <end>
+Target:a young girl with blond hair and blue eyes is eating a cookie with one hand while holding another cookie in the other . <end>
+Output:a little girl in a hair and a eyes stands swinging a snack . a hand . her a girl . front background . <end>
+Output (no teacher forcing):a little girl in a white shirt and blue jeans plays with a young girl in a pink setting . <end> <end> hand . <end>
+============================================= 1539166395_0cdc0accee.jpg
+Caption:<start> a child with a skull on his shirt is sitting in front of some plants and a building and is holding onto handlebars . <end>
+Target:a child with a skull on his shirt is sitting in front of some plants and a building and is holding onto handlebars . <end>
+Output:a young in a green and is face is holding in a of a a on a large in smiling on on the . <end>
+Output (no teacher forcing):a young child with a green shirt on is looking at the camera . <end> <end> . <end> looks at a camera . <end> <end>
+============================================= 3318564834_4ccea90497.jpg
+Caption:<start> a boy pauses in drawing on a white balloon to smile at the camera , and the girl next to him also smiles at the camera . <end>
+Target:a boy pauses in drawing on a white balloon to smile at the camera , and the girl next to him also smiles at the camera . <end>
+Output:two man is at a while a stage basketball party party . the camera . while another other in to the . . . the other . <end>
+Output (no teacher forcing):two people are standing around a fountain at the beach . <end> <end> . <end> <end> <end> . <end> <end> a <end> <end> . <end> <end> <end> out
+============================================= 3440160917_4524cfd9f6.jpg
+Caption:<start> a small child is holding a basket of brightly colored easter eggs and is picking up a pink one from the grass . <end>
+Target:a small child is holding a basket of brightly colored easter eggs and is picking up a pink one from the grass . <end>
+Output:a man boy is walking a green and brown colored and and . a standing a a brown blanket in behind camera . <end>
+Output (no teacher forcing):a man and a woman walk away from the camera . <end> <end> . <end> . <end> <end> . <end> <end> . <end> <end>
+============================================= 3694071771_ce760db4c7.jpg
+Caption:<start> a man with a red helmet and numbers on his arm and leg is riding a red racing bike . <end>
+Target:a man with a red helmet and numbers on his arm and leg is riding a red racing bike . <end>
+Output:a man with a beard hat is a stands his head stands talking in standing in bike bike <end> . <end>
+Output (no teacher forcing):a man with a beard , wearing a hat , and a blue shirt in front of a sign . <end>
+============================================= 432167214_c17fcc1a2d.jpg
+Caption:<start> a man in a blue and yellow jacket holding a religious sign stands in a street with people behind him on the sidewalk . <end>
+Target:a man in a blue and yellow jacket holding a religious sign stands in a street with people behind him on the sidewalk . <end>
+Output:a dog and a hat hat white hat is a small in in next front courtyard . his and him . a floor . <end>
+Output (no teacher forcing):a dog is jumping up in the air to catch a ball . <end> <end> . <end> <end> . <end> . <end> <end> . <end>
+============================================= 3136404885_f4d8f1d15a.jpg
+Caption:<start> a bald man in a striped shirt and jeans walks away from a mural of a red car with a blonde man wearing an orange and black jacket with jeans . <end>
+Target:a bald man in a striped shirt and jeans walks away from a mural of a red car with a blonde man wearing an orange and black jacket with jeans . <end>
+Output:a young man in a black shirt is black runs up from the red . other woman baseball . a white woman . a office shirt white scarf . them . <end>
+Output (no teacher forcing):a young boy is swinging at a playground . <end> <end> <end> . <end> <end> <end> <end> <end> <end> <end> . <end> <end> <end> . <end> <end> . <end> <end> . <end>
+============================================= 2541901399_0a57f4cc76.jpg
+Caption:<start> a toddler in a green and yellow jersey is being followed by a wheelchair bound woman in a red sweater past a wooden bench . <end>
+Target:a toddler in a green and yellow jersey is being followed by a wheelchair bound woman in a red sweater past a wooden bench . <end>
+Output:a group in blue blue shirt yellow shirt is riding watched by two man on on . the park chair . the large fence . <end>
+Output (no teacher forcing):a group of people are standing in front of a large rock formation . <end> <end> . <end> <end> . <end> <end> . <end> <end> .
+============================================= 2318721455_80c6644441.jpg
+Caption:<start> a boy in a diaper jumps onto a bed with a striped covering and red pillow in a room with toys and a chair . <end>
+Target:a boy in a diaper jumps onto a bed with a striped covering and red pillow in a room with toys and a chair . <end>
+Output:a person in a red is and a red . a man sky . his people . his background . the . other woman in <end>
+Output (no teacher forcing):a person in a red uniform is looking at the camera and taking a picture . <end> <end> . <end> <end> <end> . <end> <end> .
+============================================= 514222303_cb98584536.jpg
+Caption:<start> a little girl in a hat , striped shirt , and red shorts walking on a rope bridge . <end>
+Target:a little girl in a hat , striped shirt , and red shorts walking on a rope bridge . <end>
+Output:a little girl in a red is wearing shirt is is a shorts is on a lawn lawn . <end>
+Output (no teacher forcing):a little girl in a red shirt is running on a grassy path in a grassy area . <end> <end>
+============================================= 749840385_e004bf3b7c.jpg
+Caption:<start> a man wearing a white shirt is standing in a doorway surrounded by green bars , and his holding a cellphone up to his right ear . <end>
+Target:a man wearing a white shirt is standing in a doorway surrounded by green bars , and his holding a cellphone up to his right ear . <end>
+Output:a man with a green shirt and standing in front front with by two trees . and a friend hands cup . . him left . . <end>
+Output (no teacher forcing):a man with a green bow-tie and two other children looking at something . <end> <end> . <end> <end> . <end> <end> <end> . <end> <end> <end> .
+============================================= 3529721084_4b405baf54.jpg
+Caption:<start> a leather clad biker wearing face-paint sits on his motorcycle next to another biker who is standing beside his bike on a city street . <end>
+Target:a leather clad biker wearing face-paint sits on his motorcycle next to another biker who is standing beside his bike on a city street . <end>
+Output:a man of full in a is on a side . to a person . is looking . it . . . snowy . . <end>
+Output (no teacher forcing):a man is performing a stunt on a snowboard . <end> <end> . <end> . <end> <end> . <end> <end> . <end> . <end> <end> .
+============================================= 3437693401_202afef348.jpg
+Caption:<start> in a fenced yard with a white house in the background , a white dog jumps in the air beside a brown dog . <end>
+Target:in a fenced yard with a white house in the background , a white dog jumps in the air beside a brown dog . <end>
+Output:a white white in is a person and in the background and a man and and and the air . it woman dog . <end>
+Output (no teacher forcing):a white dog in a green collar is standing in front of a brick wall <end> . <end> <end> a crowd <end> . <end> <end>
+============================================= 1745110280_0cbff5e273.jpg
+Caption:<start> stretched image of a brown dog with a white patch of fur in his chest area sitting in the grass with trees in the background . <end>
+Target:stretched image of a brown dog with a white patch of fur in his chest area sitting in the grass with trees in the background . <end>
+Output:two walking in a dog dog in a toy object toy them . its mouth <end> . . . background . a . the background . <end>
+Output (no teacher forcing):two dogs running through a field of grass and clover . <end> <end> <end> <end> . <end> <end> <end> <end> . <end> <end> <end> . <end> <end>
+============================================= 264141937_585320617a.jpg
+Caption:<start> a woman wearing dollar sign glasses , holding a dollar bill , stands with a suitcase that says " lucky " that is overflowing with cash . <end>
+Target:a woman wearing dollar sign glasses , holding a dollar bill , stands with a suitcase that says " lucky " that is overflowing with cash . <end>
+Output:a man with a is and and and a shopping umbrella and and behind her few in says " hell it . is you in a register <end>
+Output (no teacher forcing):a man stands with a woman standing on a busy street . <end> <end> <end> . <end> <end> . <end> <end> . <end> <end> . <end> <end> .
+============================================= 753285176_f21a2b984d.jpg
+Caption:<start> a woman with her sweatshirt tied around her waist holding hands with a young girl in a green shirt as they walk up a grassy hill . <end>
+Target:a woman with her sweatshirt tied around her waist holding hands with a young girl in a green shirt as they walk up a grassy hill . <end>
+Output:a man in a hair and through a dog in a a a boy boy in the field field . the run on a grassy hill . <end>
+Output (no teacher forcing):a man and a woman are running through a grassy field . <end> <end> . <end> <end> . <end> <end> <end> . <end> <end> <end> . <end> <end>
+============================================= 3351360323_91bb341350.jpg
+Caption:<start> two musicians in white suits play guitars while surrounded by associated gear and a red curtain . <end>
+Target:two musicians in white suits play guitars while surrounded by associated gear and a red curtain . <end>
+Output:a men are the shirts and with while one by men . . . . . . <end>
+Output (no teacher forcing):a man in a tan shirt is standing in front of a group of people . <end> <end>
+============================================= 1685463722_55843b6d3c.jpg
+Caption:<start> the woman in blue shorts and a brown vest has a black dog to the right of her and a dog behind her . <end>
+Target:the woman in blue shorts and a brown vest has a black dog to the right of her and a dog behind her . <end>
+Output:a man in the is is a white skirt is a black and on try side in the . a man . . . <end>
+Output (no teacher forcing):a man is standing on the curb of a green and white dog . <end> <end> . <end> <end> . <end> <end> . <end> <end>
+============================================= 2532262109_87429a2cae.jpg
+Caption:<start> a group of 5 girls in school uniforms are standing together and waiting to cross the street while one girl takes a picture . <end>
+Target:a group of 5 girls in school uniforms are standing together and waiting to cross the street while one girl takes a picture . <end>
+Output:a man of people in in a uniforms are standing in on watching at be a street . a is is a picture . <end>
+Output (no teacher forcing):a man plays a guitar in front of a group of people . <end> <end> . <end> <end> . <end> . <end> <end> . <end>
+============================================= 3036641436_d6594fc45f.jpg
+Caption:<start> two girls swing on with a boy , all three are wearing blue shirts of the same shade and blue jeans . <end>
+Target:two girls swing on with a boy , all three are wearing blue shirts of the same shade and blue jeans . <end>
+Output:a children are in a a wooden in while over in sticking orange . . them same brown . grey . . <end>
+Output (no teacher forcing):a young boy plays in a pile of playground equipment . <end> <end> . <end> <end> <end> . <end> <end> . <end> <end>
+============================================= 2602679255_785b851b46.jpg
+Caption:<start> a female on a bike is wearing black wings , and a metal halo , while others walk by . <end>
+Target:a female on a bike is wearing black wings , and a metal halo , while others walk by . <end>
+Output:a man in a street is being a , . a a boy crown . <end> the are . . <end>
+Output (no teacher forcing):a man in a white shirt and a tie are playing a game . <end> <end> <end> . <end> <end> <end>
+============================================= 3260214530_7179346407.jpg
+Caption:<start> a young girl being held by an older woman wearing bluejeans sitting on the lap of a bear statue near the entrance to a wooden building . <end>
+Target:a young girl being held by an older woman wearing bluejeans sitting on the lap of a bear statue near the entrance to a wooden building . <end>
+Output:two man man in pulled in a older man in a . . a ground of a mountain . . a woods . a road fence . <end>
+Output (no teacher forcing):two men stand in the sand on a sunny day . <end> . <end> <end> . <end> . <end> . <end> . <end> . <end> . <end> .
+============================================= 3514179514_cbc3371b92.jpg
+Caption:<start> a baseman tries to catch a ball while a runner tries to make the base in a community game . <end>
+Target:a baseman tries to catch a ball while a runner tries to make the base in a community game . <end>
+Output:a young and to catch a flying as in man comes to get a base . a softball game . <end>
+Output (no teacher forcing):a young boy is jumping in the air in a playground down a playground . <end> <end> <end> . <end> <end>
+============================================= 3262301835_9f1a49b80a.jpg
+Caption:<start> one man holding a post and another man and woman waiting to cross the street looking to their left . <end>
+Target:one man holding a post and another man and woman waiting to cross the street looking to their left . <end>
+Output:a person is a stick trying another boy is a are to cross the side . at . right . <end>
+Output (no teacher forcing):a man wearing a white shirt and black pants plays with a brown dog . <end> <end> . <end> <end> .
+============================================= 3542418447_7c337360d6.jpg
+Caption:<start> two dogs , one brown one black with a yellow toy , black dog has mouth open and brown dog has the toy . <end>
+Target:two dogs , one brown one black with a yellow toy , black dog has mouth open and brown dog has the toy . <end>
+Output:a dogs are one brown and is , white bandanna bandanna , running and jumps its in and playing is is on blue in <end>
+Output (no teacher forcing):a dog with a muzzle in his mouth <end> running through a field . <end> <end> <end> . <end> <end> <end> <end> . <end> <end>
+============================================= 1801063894_60bce29e19.jpg
+Caption:<start> a woman in a yellow bathing suit gets ready to jump in the water to join someone . <end>
+Target:a woman in a yellow bathing suit gets ready to jump in the water to join someone . <end>
+Output:a young stands a black shirt suit is ready to ride for a sidewalk below her her . <end>
+Output (no teacher forcing):a young man in a brown shirt is standing barefoot on a sidewalk and a man is holding the
+============================================= 2694890967_7c7a89de16.jpg
+Caption:<start> a group of young adult women in bikinis sit in a field of wild grass and flowers , some under a striped umbrella . <end>
+Target:a group of young adult women in bikinis sit in a field of wild grass and flowers , some under a striped umbrella . <end>
+Output:a beagle of dogs children playing in a are in a field . grass grass . clover . one trees each tree tree . <end>
+Output (no teacher forcing):a beagle is playing in a field of grass . <end> <end> . <end> <end> . <end> <end> . <end> <end> <end> from a blue
+============================================= 2862676319_a9dab1309f.jpg
+Caption:<start> a person has a mask , which has a red nose and a black bandanna , over his face . <end>
+Target:a person has a mask , which has a red nose and a black bandanna , over his face . <end>
+Output:a man in their long over and is a pair and and black black jacket on on them head . <end>
+Output (no teacher forcing):a man with a pierced hat and a beard in a white shirt . <end> <end> <end> . <end> <end> .
+============================================= 3634032601_2236676cdd.jpg
+Caption:<start> a crowd of people with a lady with a bright orange shirt and another lady in black have their backs to the camera . <end>
+Target:a crowd of people with a lady with a bright orange shirt and another lady in black have their backs to the camera . <end>
+Output:a woman of people are their shopping standing their stand colored shirts and matching man . front . their hands to the camera . <end>
+Output (no teacher forcing):a woman with a microphone is looking at a crowded event . <end> . <end> <end> . <end> <end> . <end> <end> . <end> <end>
+============================================= 397286183_745abbf40d.jpg
+Caption:<start> a man in a blue jacket widely opens his big blue eyes as a man behind him closes his eyes as he covers his mouth . <end>
+Target:a man in a blue jacket widely opens his big blue eyes as a man behind him closes his eyes as he covers his mouth . <end>
+Output:a black with a black shirt is with his tongue stick eyes . another young holds him looks his head . they looks his ears . <end>
+Output (no teacher forcing):a black dog is making a blue and white object in the air . <end> <end> . <end> <end> . <end> <end> . <end> <end> . <end>
+============================================= 3688858505_e8afd1475d.jpg
+Caption:<start> a blond girl in a green dress and elaborate gold necklace stands in front of a few women and a man . <end>
+Target:a blond girl in a green dress and elaborate gold necklace stands in front of a few women and a man . <end>
+Output:a girl girl in a colorful dress is hat girl helmet is in a of a large glass . glass young . <end>
+Output (no teacher forcing):a girl in a pink dress is swinging on a playground . <end> <end> <end> . <end> <end> . <end> <end> . <end>
+============================================= 2436160351_108924a65b.jpg
+Caption:<start> two young children with red dots are their foreheads are both wearing yellow shirts and red shorts and one is riding a red tricycle . <end>
+Target:two young children with red dots are their foreheads are both wearing yellow shirts and red shorts and one is riding a red tricycle . <end>
+Output:a people men riding backpacks backpacks are running bikes on in wearing jeans shirts and red on . on on on on red . . <end>
+Output (no teacher forcing):a man riding a small brown horse is in an orange helmet attached to a black bull . <end> . <end> <end> . <end> <end> <end>
+============================================= 2269021076_cefc9af989.jpg
+Caption:<start> a woman with silver pants and pink bellbottoms , and a pink scarf riding her bike by a fence , with buildings in the background . <end>
+Target:a woman with silver pants and pink bellbottoms , and a pink scarf riding her bike by a fence , with buildings in the background . <end>
+Output:a skateboarder is a hair and a hair sit sitting the man jacket is on on on the street . <end> a to the background . <end>
+Output (no teacher forcing):a skateboarder in the middle of a bench . <end> <end> . <end> <end> . <end> <end> <end> . <end> <end> <end> a camera . <end> <end>
+============================================= 2525270674_4ab536e7ec.jpg
+Caption:<start> a dog with his front paws off the ground holds a white frisbee in his mouth in an rv campground . <end>
+Target:a dog with his front paws off the ground holds a white frisbee in his mouth in an rv campground . <end>
+Output:a white catching a mouth up off a face . a bird object . his mouth . his open . . <end>
+Output (no teacher forcing):a white dog with black spots is next to a white dog . <end> <end> . <end> <end> . <end> <end> .
+============================================= 3609032038_005c789f64.jpg
+Caption:<start> a motorcycle rider on a path of rocks with a person holding a camera in the background with trees all around . <end>
+Target:a motorcycle rider on a path of rocks with a person holding a camera in the background with trees all around . <end>
+Output:two man with wearing its leash through another . another rope through onto rope over its background . its in over . <end>
+Output (no teacher forcing):two people are walking down a dirt path with their long grass and the woods . <end> <end> . <end> <end> . <end>
+============================================= 3027009366_c8362521e8.jpg
+Caption:<start> a man in a red uniform leaps in the air as one in a white uniform tries to kick a ball . <end>
+Target:a man in a red uniform leaps in the air as one in a white uniform tries to kick a ball . <end>
+Output:two man in a red uniform is in the air while a tries white red jersey is to tackle up soccer in <end>
+Output (no teacher forcing):two teams of soccer teams playing a game on a field . <end> <end> . <end> <end> <end> . <end> <end> . <end>
+============================================= 2555638166_2f0847d57d.jpg
+Caption:<start> three people playing with a red ball in a large sandy area with a tree in the background . <end>
+Target:three people playing with a red ball in a large sandy area with a tree in the background . <end>
+Output:a children are on a rope rope on the field field area . mountains city in the background . <end>
+Output (no teacher forcing):a little boy in a black and white shirt is playing with a black dog on a beach . <end>
+============================================= 1132772170_600610c5df.jpg
+Caption:<start> a man is standing with his arms folded looking at something while the person behind him is jumping onto one of the two beds in the room . <end>
+Target:a man is standing with his arms folded looking at something while the person behind him is jumping onto one of the two beds in the room . <end>
+Output:two man and playing next a arm around by at a . another other holds him is holding . a of another woman other . a . . <end>
+Output (no teacher forcing):two men are playing rugby in a computer gym . <end> <end> . <end> <end> . <end> <end> <end> . <end> <end> <end> . <end> <end> at a stand
+============================================= 2970183443_accd597e0a.jpg
+Caption:<start> small white dog with spot on back leaping in air with football in mouth with small boy and man watching . <end>
+Target:small white dog with spot on back leaping in air with football in mouth with small boy and man watching . <end>
+Output:a man man with man in its in in the at the <end> hand <end> other white <end> person in <end> <end>
+Output (no teacher forcing):a man is standing in front of a group of people at a restaurant . <end> <end> <end> . <end> <end> <end>
+============================================= 3590753142_61993d39df.jpg
+Caption:<start> three people are standing at a fence looking at a skyscraper filled city while one looks through a binocular scope . <end>
+Target:three people are standing at a fence looking at a skyscraper filled city while one looks through a binocular scope . <end>
+Output:a people are standing on the mountain on down the beach . . . . takes down the . . . <end>
+Output (no teacher forcing):a man and woman are sitting on the beach . <end> . <end> <end> . <end> <end> . <end> <end> . <end>
+============================================= 3677239603_95865a9073.jpg
+Caption:<start> a girl in a purple sweater and a shoulder bag is looking to the side with a lot of people behind her . <end>
+Target:a girl in a purple sweater and a shoulder bag is looking to the side with a lot of people behind her . <end>
+Output:a man in a white dress is a white uniform is a at a other . a man of people . him . <end>
+Output (no teacher forcing):a man in a white shirt and blue shorts is playing a soccer ball while a woman stands behind him . <end> . <end>
+============================================= 2657301826_aab4c36e6c.jpg
+Caption:<start> a child in a blue scarf and a tan outfit plays with plastic toys on a rug nearby a soft chair . <end>
+Target:a child in a blue scarf and a tan outfit plays with plastic toys on a rug nearby a soft chair . <end>
+Output:a small in a red shirt is orange man hat standing with a in . . well . . bench . . <end>
+Output (no teacher forcing):a small boy in a red shirt sitting on a tan sofa . <end> <end> . <end> <end> . <end> <end> . <end>
+============================================= 3451984463_37ac1ff7a8.jpg
+Caption:<start> a man with a backpack wearing a yellow raincoat is riding a bicycle past red brick and stone wall . <end>
+Target:a man with a backpack wearing a yellow raincoat is riding a bicycle past red brick and stone wall . <end>
+Output:a man in a black is a black jacket is walking on white on the and buildings buildings . . <end>
+Output (no teacher forcing):a man in a white uniform is leaning against a white wall . <end> <end> . <end> <end> <end> . <end>
+============================================= 3524975665_7bec41578b.jpg
+Caption:<start> a woman wearing a brown hat , sunglasses , jeans , white shoes and a yellow trench coat stand on the sidewalk . <end>
+Target:a woman wearing a brown hat , sunglasses , jeans , white shoes and a yellow trench coat stand on the sidewalk . <end>
+Output:a boy runs a white shirt is white and and and and and and a blue ball dog . on the grass . <end>
+Output (no teacher forcing):a boy runs through the grass . <end> <end> <end> . <end> <end> . <end> <end> . <end> <end> . <end> <end> . <end>
+============================================= 275401000_8829250eb3.jpg
+Caption:<start> a brown , tan , and white dog and a black and white dog are playing with a tennis ball on a house deck . <end>
+Target:a brown , tan , and white dog and a black and white dog are playing with a tennis ball on a house deck . <end>
+Output:a boy and white dog and black dog is a man dog white dog are standing in a third in in the well . . <end>
+Output (no teacher forcing):a boy in a white shirt with a blond girl in the background . <end> <end> <end> . <end> <end> . <end> <end> . <end> <end>
+============================================= 191003287_2915c11d8e.jpg
+Caption:<start> a man with sunglasses and a black shirt feeds ice cream to a girl with an orange dress on who is sitting beside an opened bag . <end>
+Target:a man with sunglasses and a black shirt feeds ice cream to a girl with an orange dress on who is sitting beside an opened bag . <end>
+Output:a man and a and a woman hat poses a . on pass street on a older backpack . . . . . . . . . <end>
+Output (no teacher forcing):a man and a woman are smiling at the camera . <end> <end> . <end> <end> . <end> <end> <end> looks at a child <end> . <end> <end>
+============================================= 3475111806_f0d2927707.jpg
+Caption:<start> two men in a crowd are turned around taking a picture together while a concert is going on in the background . <end>
+Target:two men in a crowd are turned around taking a picture together while a concert is going on in the background . <end>
+Output:a people wearing suits camouflage gathers looking against a a large . . smiling smiling is behind behind . the background . <end>
+Output (no teacher forcing):a man and two women in matching shirts are standing together . <end> . <end> . <end> <end> . <end> <end> . <end>
+============================================= 3134387513_ceb75bea0a.jpg
+Caption:<start> a man and woman in a dark room with lights behind them holding drinks while a bright green light shines in their faces . <end>
+Target:a man and woman in a dark room with lights behind them holding drinks while a bright green light shines in their faces . <end>
+Output:a man with a in black crowd shirt . a are a . a . a crowd light light . in the hands . <end>
+Output (no teacher forcing):a man with a thermos is standing in front of a crowd . <end> <end> . <end> <end> <end> <end> <end> . <end> <end> <end>
+============================================= 2772532341_c4597a94ed.jpg
+Caption:<start> a woman dressed in black with a hula hoop around her waist performs in front of diners . <end>
+Target:a woman dressed in black with a hula hoop around her waist performs in front of diners . <end>
+Output:a man in in white is white white hoop in her neck on a a of a <end> <end>
+Output (no teacher forcing):a man in a white shirt is standing in a crowd with a little girl in a blue outfit
+============================================= 2393196444_8f4f540f5f.jpg
+Caption:<start> a boy wearing a brown shirt and hat sits on a box next to a girl in front of a store . <end>
+Target:a boy wearing a brown shirt and hat sits on a box next to a girl in front of a store . <end>
+Output:a boy is a white shirt is blue is on a plastic in to a water . a of a large . <end>
+Output (no teacher forcing):a boy is standing in a pool full of people sitting on a fairground ride . <end> . <end> . <end> <end> .
+============================================= 3561314880_ea9a7e245f.jpg
+Caption:<start> a older man is wearing a torn up suit and is leaning on an orange shopping cart full of items . <end>
+Target:a older man is wearing a torn up suit and is leaning on an orange shopping cart full of items . <end>
+Output:a group man is standing a white shirt suit on standing standing on a outdoor staircase cart . of people . <end>
+Output (no teacher forcing):a group of people are walking on a narrow outdoor path . <end> <end> . <end> <end> . <end> <end> . <end>
+============================================= 765929807_de381cc764.jpg
+Caption:<start> two boys and a man holding a white hat climb on a rock with a lawn and shade trees visible in the background . <end>
+Target:two boys and a man holding a white hat climb on a rock with a lawn and shade trees visible in the background . <end>
+Output:two boys play one man playing a large surfboard standing in a log ledge greenery river . its . . . the background . <end>
+Output (no teacher forcing):two boys play with a rope toy while one is sitting on a rock . <end> <end> . <end> <end> . <end> . <end> <end>
+============================================= 3292016893_24d14c8b4f.jpg
+Caption:<start> a blonde dog is standing beside a blonde puppy , who is trying to get a stuffed animal from the adult dog . <end>
+Target:a blonde dog is standing beside a blonde puppy , who is trying to get a stuffed animal from the adult dog . <end>
+Output:a dog dog is running in its body girl in holding is in to get a ball ball . . side . . <end>
+Output (no teacher forcing):a dog runs through the water . <end> <end> <end> . <end> <end> . <end> <end> . <end> <end> . <end> <end> <end> from
+============================================= 2055646179_169807fed4.jpg
+Caption:<start> a man in an orange shirt is helping a boy squirt water from a hose into a pond whilst a woman and boy watch . <end>
+Target:a man in an orange shirt is helping a boy squirt water from a hose into a pond whilst a woman and boy watch . <end>
+Output:a group is a orange shirt stands being a young so quickly . the bench . the grassy . . blue crouches them are . <end>
+Output (no teacher forcing):a group of people are sitting in a grassy field playing with a round and yellow ball . <end> <end> <end> . <end> <end> <end> .
+============================================= 2393298349_e659308218.jpg
+Caption:<start> two children are playing with a soccer ball in a grassy field also containing a white goat and a small black dog . <end>
+Target:two children are playing with a soccer ball in a grassy field also containing a white goat and a small black dog . <end>
+Output:a dogs are playing on each rope ball in their field field . with trees trees body behind green bright pink plane . <end>
+Output (no teacher forcing):a boy in a white shirt and blue jeans runs through a field of green trees . <end> <end> <end> . <end> <end> .
+============================================= 3467282545_273a97b628.jpg
+Caption:<start> three men , one dressed as an islamic holy man , sit in a room with green walls doing paperwork , . <end>
+Target:three men , one dressed as an islamic holy man , sit in a room with green walls doing paperwork , . <end>
+Output:a dogs and one with in , orange dog dog in in on a crowd with onlookers toys . . . . <end>
+Output (no teacher forcing):a dog is looking at the camera whilst standing on its hind legs . <end> <end> . <end> . <end> <end> . <end>
+============================================= 3145967019_1a83ebf712.jpg
+Caption:<start> three smiling women , one with a shoulder bag , one with a blue cup and one using sign language are posing for a picture . <end>
+Target:three smiling women , one with a shoulder bag , one with a blue cup and one using sign language are posing for a picture . <end>
+Output:a people people and one with a large of . next holding a red sweater in smiling in a . . . . a photograph . <end>
+Output (no teacher forcing):a man and woman pose for the camera in front of a group of people . <end> . <end> <end> . <end> <end> <end> <end> <end> <end>
+============================================= 2603690144_7a28b1d13c.jpg
+Caption:<start> a little boy and a dog run down a hill , behind them , a boy on a mini cycle and a shouting family . <end>
+Target:a little boy and a dog run down a hill , behind them , a boy on a mini cycle and a shouting family . <end>
+Output:a man boy in a girl are in a hill . surrounded a . with rope in his sunny bike area uniform pile . in <end>
+Output (no teacher forcing):a man in a red shirt is watching a flying through the air in front of a group of people . <end> . <end> <end> .
+============================================= 3602676311_824b2c04ba.jpg
+Caption:<start> a person on a bicycle wears a helmet and jumps , soaring over the ground in front of a skyline and lake . <end>
+Target:a person on a bicycle wears a helmet and jumps , soaring over the ground in front of a skyline and lake . <end>
+Output:a man on a bike jumping a bike jumping jumping . high on a sky . front of a crowd . trees . <end>
+Output (no teacher forcing):a man doing tricks on a bike . <end> <end> <end> . <end> <end> . <end> <end> <end> . <end> <end> . <end> <end>
+============================================= 443885436_6e927e6c58.jpg
+Caption:<start> a white dog with light brown markings has a stick in his mouth and his paws in the snow . <end>
+Target:a white dog with light brown markings has a stick in his mouth and his paws in the snow . <end>
+Output:a dog dog is brown brown spots is its stick in its mouth . splashes way on the snow . <end>
+Output (no teacher forcing):a dog runs through the snow . <end> <end> . <end> <end> . <end> . <end> <end> . <end> <end> .
+============================================= 930126921_1b94605bdc.jpg
+Caption:<start> the man white purple and white polka-dotted shirts is eating and looking to his right while the woman behind him has a confused look on her face . <end>
+Target:the man white purple and white polka-dotted shirts is eating and looking to his right while the woman behind him has a confused look on her face . <end>
+Output:a little in with with black shirt , with standing on drinking at the left . the other holds him is her shirt . on . . . <end>
+Output (no teacher forcing):a young boy with a denim hat is standing in front of a brick wall with a green background . <end> <end> <end> . <end> <end> at a camera
+============================================= 3560726559_4c4bed9f2d.jpg
+Caption:<start> the man in the black suit and hat is holding the hand of the girl in the green dress whilst looking away from each other . <end>
+Target:the man in the black suit and hat is holding the hand of the girl in the green dress whilst looking away from each other . <end>
+Output:a man is the brown shirt is hat is standing a two of a two in the green shirt . being up . the other . <end>
+Output (no teacher forcing):a man is standing near the tree trunk . <end> <end> <end> . <end> <end> <end> <end> can . <end> <end> . <end> <end> . <end> <end>
+============================================= 3433470650_a8b1c27173.jpg
+Caption:<start> a group of men walk on a street with yellow ribbon in front of a white and red building . <end>
+Target:a group of men walk on a street with yellow ribbon in front of a white and red building . <end>
+Output:a young of people are to a sidewalk . several flowers and the of a group building tan van . <end>
+Output (no teacher forcing):a young girl is standing in front of a group of people on a sidewalk <end> <end> <end> <end> . <end>
+============================================= 2460823604_7f6f786b1c.jpg
+Caption:<start> the boy in the green and yellow shirt has a glove on and is going towards the ball . <end>
+Target:the boy in the green and yellow shirt has a glove on and is going towards the ball . <end>
+Output:a soccer in the red shirt white jersey is just soccer on his is watching . the ball . <end>
+Output (no teacher forcing):a soccer player has just on the ground and is playing the ball . <end> <end> . <end> <end> .
+============================================= 2201222219_8d656b0633.jpg
+Caption:<start> a young child is sitting in a colorful chair with a guitar in his hands and a book sitting next to him . <end>
+Target:a young child is sitting in a colorful chair with a guitar in his hands and a book sitting next to him . <end>
+Output:two girl girl is doing on a red outfit on a red on his hand . smiling crowd shelf on to him . <end>
+Output (no teacher forcing):two young children are playing in a carnival ride with a round jet . <end> <end> . <end> <end> . <end> <end> . <end>
+============================================= 3033612929_764d977bd5.jpg
+Caption:<start> a small white dog is carrying something blue in its mouth and a bigger brown and black dog is carrying something orange in its mouth . <end>
+Target:a small white dog is carrying something blue in its mouth and a bigger brown and black dog is carrying something orange in its mouth . <end>
+Output:a large dog dog is playing a in in its mouth while playing small black dog white dog . walking it in . its mouth . <end>
+Output (no teacher forcing):a large dog is standing on a log near some other people . <end> . <end> <end> . <end> . <end> <end> . <end> <end> . <end>
+============================================= 2141713971_e25eb12712.jpg
+Caption:<start> a woman and a younger girl , both wearing blue jackets and knit caps , slide down a hill on a snow sled , a dog running at their side . <end>
+Target:a woman and a younger girl , both wearing blue jackets and knit caps , slide down a hill on a snow sled , a dog running at their side . <end>
+Output:a young holding a boy boy are wearing wearing white jeans are a hats walk walk down a snowy . their road . . . group . . it chins . <end>
+Output (no teacher forcing):a young boy wearing a white shirt with his arms stretched out to left side and a boy in blue is behind her face . <end> . <end> <end> . <end> <end>
+============================================= 3534183988_3763593dfb.jpg
+Caption:<start> a man in white , a man in black with a red headscarf , and a blond woman smoking . <end>
+Target:a man in white , a man in black with a red headscarf , and a blond woman smoking . <end>
+Output:a woman and a pants standing black in a pants a brown shirt stands a a woman woman in . <end>
+Output (no teacher forcing):a woman in a black and white shirt stands in front of a group of people in a church . <end>
+============================================= 3269087421_1d489abeae.jpg
+Caption:<start> a man in a flowered shirt holds a microphone beside a violin player standing in a crowd of people . <end>
+Target:a man in a flowered shirt holds a microphone beside a violin player standing in a crowd of people . <end>
+Output:a man in a suit shirt is a box in a man in in on front garage . people . <end>
+Output (no teacher forcing):a man in a suit is playing rugby <end> . <end> <end> <end> at a camera . <end> <end> <end> at
+============================================= 2622971954_59f192922d.jpg
+Caption:<start> a man in a blue and fuchsia sweater holds his hands as if to catch something while standing in a crowd of people . <end>
+Target:a man in a blue and fuchsia sweater holds his hands as if to catch something while standing in a crowd of people . <end>
+Output:a man in a red jacket white hat is a large out another another a a in another in a crowd of . . <end>
+Output (no teacher forcing):a man in a red hat is playing a piano in a public area . <end> <end> . <end> <end> . <end> <end> . <end>
+============================================= 410042380_517ccee020.jpg
+Caption:<start> a blond woman is sitting in a brown leather chair while another woman is walking next to a store in the background <end>
+Target:a blond woman is sitting in a brown leather chair while another woman is walking next to a store in the background <end>
+Output:a young man sitting sitting on front public chair room on eating man is sitting on to her baby . a house .
+Output (no teacher forcing):a young man is doing a back flip on a skateboard . <end> <end> . <end> . <end> . <end> <end> . <end>
+============================================= 2078311270_f01c9eaf4c.jpg
+Caption:<start> two women walking near some trees in warm , dark-colored garments , one with a hat , one with an upraised collar . <end>
+Target:two women walking near some trees in warm , dark-colored garments , one with a hat , one with an upraised collar . <end>
+Output:a young are down a trees . a . red around around red in red red . red behind the orange hand . <end>
+Output (no teacher forcing):a man holding a small football standing in front of a crowd of people . <end> <end> . <end> <end> . <end> <end> .
+============================================= 3441104823_33cdae5a56.jpg
+Caption:<start> a crowd of people dressed for warm weather stand in line in front of a building waiting for something . <end>
+Target:a crowd of people dressed for warm weather stand in line in front of a building waiting for something . <end>
+Output:a man of people socializing in halloween clothes . . front for front of a waterfall . . a . <end>
+Output (no teacher forcing):a man and woman pose for a picture near a large brick wall with a few people in the background .
+============================================= 3204686006_88f04547b9.jpg
+Caption:<start> four people in various stage of sledding on a snowy hill , while a dog playfully chases one of them . <end>
+Target:four people in various stage of sledding on a snowy hill , while a dog playfully chases one of them . <end>
+Output:a dogs are the clothing on a <end> a snowy day . <end> a dog is in the end them is <end>
+Output (no teacher forcing):a dog with a black dog in its mouth is jumping through a pile of rocks . <end> <end> . <end> <end>
+============================================= 485357535_b45ba5b6da.jpg
+Caption:<start> a boy in a black and white shirt holds a red skateboard as he stands over the hollywood stars . <end>
+Target:a boy in a black and white shirt holds a red skateboard as he stands over the hollywood stars . <end>
+Output:a woman in a red shirt white shirt is a piece rope in another walks in him ground sign . <end>
+Output (no teacher forcing):a woman in a red jacket is standing on the street next to a man who is standing on the sidewalk
+============================================= 369047365_35476becc9.jpg
+Caption:<start> the man wearing the white shirt takes a picture of the man in the blue shirt with the two dogs . <end>
+Target:the man wearing the white shirt takes a picture of the man in the blue shirt with the two dogs . <end>
+Output:two two is a black shirt is a picture of his two 's a brown shirt . his backpack backpack . <end>
+Output (no teacher forcing):two people run in a field of dry grass . <end> . <end> <end> . <end> <end> . <end> <end> . <end>
+============================================= 2278766574_f71f1704a8.jpg
+Caption:<start> a youn woman on a man 's back walking down a cement path with another couple behind them holding hands . <end>
+Target:a youn woman on a man 's back walking down a cement path with another couple behind them holding hands . <end>
+Output:a young man is a sidewalk 's legs is with a street path . others person nearby him . . . <end>
+Output (no teacher forcing):a young man jumps off a basketball during a competition . <end> <end> . <end> <end> . <end> <end> . <end> <end>
+============================================= 3659686168_49c3abcee1.jpg
+Caption:<start> a woman in green pants sits next to a woman in a pink jacket in front of statue of a fish . <end>
+Target:a woman in green pants sits next to a woman in a pink jacket in front of statue of a fish . <end>
+Output:a man in a is is on to a man in a red jacket and a of a . a city . <end>
+Output (no teacher forcing):a man in a red jacket is standing next to a small girl wearing a red outfit . <end> <end> . <end> <end>
+============================================= 103106960_e8a41d64f8.jpg
+Caption:<start> a young male kneeling in front of a hockey goal with a hockey stick in his right hand . <end>
+Target:a young male kneeling in front of a hockey goal with a hockey stick in his right hand . <end>
+Output:a man girl dressed in a of a girl . . a small <end> <end> his <end> <end> . <end>
+Output (no teacher forcing):a man in a red shirt is holding a small girl whilst sitting on a red carpet . <end> <end>
+============================================= 2831215155_07ba8f1805.jpg
+Caption:<start> an suv is parked in a grassy field with mountains in the background , and a woman is looking through a telescope off into the distance . <end>
+Target:an suv is parked in a grassy field with mountains in the background , and a woman is looking through a telescope off into the distance . <end>
+Output:a adult , throwing on a field field near a in the background . a a crowd watching looking behind the field . . the distance . <end>
+Output (no teacher forcing):a man in a yellow shirt sitting on a grassy hill while watching a man watches . <end> <end> . <end> <end> . <end> <end> . <end> <end>
+============================================= 2588456052_8842b47005.jpg
+Caption:<start> a woman in a purple tank top holds a tennis racket , extends an arm upward , and looks up . <end>
+Target:a woman in a purple tank top holds a tennis racket , extends an arm upward , and looks up . <end>
+Output:a young in a pink shirt top and a baseball ball in while the object in and and crowd up at <end>
+Output (no teacher forcing):a young girl in a pink shirt and a white shirt plays with a green ball . <end> <end> . <end> at
+============================================= 3708244207_0d3a2b2f92.jpg
+Caption:<start> a man stands on a dock near several boats , while 2 other men are on one of the boats . <end>
+Target:a man stands on a dock near several boats , while 2 other men are on one of the boats . <end>
+Output:a skateboarder is near the road near a other . with a a people on on a in the water . <end>
+Output (no teacher forcing):a skateboarder in the middle of a ramp . <end> <end> <end> <end> . <end> <end> <end> . <end> <end> <end> .
+============================================= 3474912569_7165dc1d06.jpg
+Caption:<start> a young girl in a blue shirt is walking in the sidewalk and holding up a pink sign that says , " the rescue . " <end>
+Target:a young girl in a blue shirt is walking in the sidewalk and holding up a pink sign that says , " the rescue . " <end>
+Output:a man man is a pink shirt and performing through a midst with has a a bike bag . says " " tree tree " <end> <end>
+Output (no teacher forcing):a man in a plaid shirt and tie is playing a bagpipe . <end> <end> <end> . <end> <end> . <end> <end> . <end> <end> . <end>
+============================================= 2394922193_310166d6af.jpg
+Caption:<start> woman wearing a red sweater , brown slacks and a white hat , rollerblading on the street in front of a yellow building . <end>
+Target:woman wearing a red sweater , brown slacks and a white hat , rollerblading on the street in front of a yellow building . <end>
+Output:a in red red shirt playing running skirt and playing man shirt on on on the sidewalk . front of a crowd flower-bed . <end>
+Output (no teacher forcing):a man in a red shirt is walking on the sidewalk with a dog in the background . <end> <end> . <end> . <end> <end>
+============================================= 3685373706_37f2ced9ff.jpg
+Caption:<start> a man with several red marks on his body is holding a flag while people in the background are cheering <end>
+Target:a man with several red marks on his body is holding a flag while people in the background are cheering <end>
+Output:a woman and a hair hair and his arm is smiling a camera . another look a background watch watch .
+Output (no teacher forcing):a woman in a blue shirt has her hand up and standing in front of a man wearing a blue shirt
+============================================= 3382303178_69b6d1bdd2.jpg
+Caption:<start> a boy is riding a skateboard down a slope that leads from a bridge to the street below . <end>
+Target:a boy is riding a skateboard down a slope that leads from a bridge to the street below . <end>
+Output:a man in in a skateboard down a hill . is in a rope . . side . . <end>
+Output (no teacher forcing):a man is snowboarding in a public park . <end> <end> . <end> <end> <end> . <end> <end> <end> <end>
+============================================= 1309330801_aeeb23f1ee.jpg
+Caption:<start> one girl is doing a handstand on an outdoor trampoline while another girl stands on the trampoline with one hand in the air . <end>
+Target:one girl is doing a handstand on an outdoor trampoline while another girl stands on the trampoline with one hand in the air . <end>
+Output:a boy is jumping a jumping on a outdoor platform . another child in in . ledge . their hand . the air . <end>
+Output (no teacher forcing):a boy jumps off of a dock and skateboard into the air . <end> <end> <end> . <end> <end> . <end> <end> <end> . <end>
+============================================= 3150440350_b0f2a9e774.jpg
+Caption:<start> a man dressed in a military uniform bends over to speak to a person sitting on the sidewalk . <end>
+Target:a man dressed in a military uniform bends over to speak to a person sitting on the sidewalk . <end>
+Output:a large is in a tan uniform is down the the with the crowd with on a ground . <end>
+Output (no teacher forcing):a large brown dog is standing in front of a brick building . <end> <end> . <end> <end> . <end>
+============================================= 3062173277_bfb5ef4c45.jpg
+Caption:<start> a rowing team races forward in competition with the motivation of their leader in front of the boat . <end>
+Target:a rowing team races forward in competition with the motivation of their leader in front of the boat . <end>
+Output:two group , sits through in front . water sun . water trees . the . the water . <end>
+Output (no teacher forcing):two girls play in the mud . <end> <end> <end> . <end> <end> . <end> <end> . <end> <end> .
+============================================= 2434074318_e35a567220.jpg
+Caption:<start> a male hiker wearing a brown hat is standing next to a triangular monument on the top of a mountain . <end>
+Target:a male hiker wearing a brown hat is standing next to a triangular monument on the top of a mountain . <end>
+Output:a man hiker sits a white shirt and playing on to a rock stone with the top of a mountain . <end>
+Output (no teacher forcing):a man is sitting on a bench with his fishing pole . <end> <end> . <end> <end> . <end> <end> . <end>
+============================================= 2752230113_b5dab6f0f1.jpg
+Caption:<start> the little girl in the pink shirt is walking ahead of a man and woman on the side of the body of water <end>
+Target:the little girl in the pink shirt is walking ahead of a man and woman on the side of the body of water <end>
+Output:a man boy in black blue sweater is sitting with with the large on a are the beach of the ocean of water .
+Output (no teacher forcing):a man and woman stand on a beach with the ocean in the background . <end> <end> <end> . <end> <end> . <end> <end>
+============================================= 1718184338_5968d88edb.jpg
+Caption:<start> a couple of people are standing and the person in the red coat is pointing at the body of water . <end>
+Target:a couple of people are standing and the person in the red coat is pointing at the body of water . <end>
+Output:a man of men are standing behind watching man is jeans black shirt is standing to it camera of water . <end>
+Output (no teacher forcing):a man in a red shirt is standing in front of a man in a black shirt and hat standing in front
+============================================= 1499495021_d295ce577c.jpg
+Caption:<start> a dark haired woman wearing a brown jacket and fatigue bottoms and a balding man wearing a green sweater and blue jeans with a fishing pole , stand at the foot of the surf . <end>
+Target:a dark haired woman wearing a brown jacket and fatigue bottoms and a balding man wearing a green sweater and blue jeans with a fishing pole , stand at the foot of the surf . <end>
+Output:a little haired child in a white jacket stands a a in a man man in a white scarf . the jacket . a white walking in next in the beach of a water . <end>
+Output (no teacher forcing):a little girl in a white dress is walking through a window next to a big brown dog . <end> <end> . <end> . <end> . <end> . <end> . <end> . <end> . <end> .
+============================================= 566794440_f9ec673a2f.jpg
+Caption:<start> a woman in camouflage and her hair up in a ponytail walks on the field with a black softball glove on one hand . <end>
+Target:a woman in camouflage and her hair up in a ponytail walks on the field with a black softball glove on one hand . <end>
+Output:a boy in a pants black pants in in the puddle . in a grass . a dog man just is it is . <end>
+Output (no teacher forcing):a boy in a white shirt and dark shorts is playing in the street . <end> <end> . <end> <end> . <end> <end> is being
+============================================= 3616638478_641d02183d.jpg
+Caption:<start> a woman in a skirt and green t-shirt has her arm draped over the shoulder of a younger woman in a white skirt and orange t-shirt . <end>
+Target:a woman in a skirt and green t-shirt has her arm draped over the shoulder of a younger woman in a white skirt and orange t-shirt . <end>
+Output:a man in a white and white plays is a arm around in her other of her man man in white white dress . black dress . <end>
+Output (no teacher forcing):a man wearing a white shirt and black pants . <end> <end> . <end> <end> . <end> <end> <end> . <end> <end> <end> . <end> <end> <end> .
+============================================= 2074146683_7c83167aa1.jpg
+Caption:<start> a woman wearing a white hat and carrying a baby , a grocery bag , and a blue tote bag , sorts her money . <end>
+Target:a woman wearing a white hat and carrying a baby , a grocery bag , and a blue tote bag , sorts her money . <end>
+Output:a young in a white shirt and sunglasses a white in is man in in is she man cap cap is she is finger . <end>
+Output (no teacher forcing):a young boy in a brown jacket is standing in front of a woman holding black signs . <end> <end> <end> <end> is running . <end>
+============================================= 633456174_b768c1d6cd.jpg
+Caption:<start> a boy in a black shirt has thrown a snowball that has left a trail of snow behind it in the air . <end>
+Target:a boy in a black shirt has thrown a snowball that has left a trail of snow behind it in the air . <end>
+Output:two man and a blue shirt is his in in in is his around and on them . him . . blue . <end>
+Output (no teacher forcing):two people stand in front of a window . <end> <end> . <end> . <end> <end> . <end> <end> . <end> <end> . <end>
+============================================= 501520507_c86f805ab8.jpg
+Caption:<start> there is a man wearing a red shirt , white shorts , red shoes , white socks and has long braided hair . <end>
+Target:there is a man wearing a red shirt , white shorts , red shoes , white socks and has long braided hair . <end>
+Output:a is a little in a red shirt and and and and and and and and and with is a hair hair . <end>
+Output (no teacher forcing):a young boy in red is getting ready to make a boy in a green shirt . <end> <end> . <end> <end> . <end>
+============================================= 3001612175_53567ffb58.jpg
+Caption:<start> a man and dog walk down cement steps while a woman in a headscarf looks on from a seated position on the bottom step . <end>
+Target:a man and dog walk down cement steps while a woman in a headscarf looks on from a seated position on the bottom step . <end>
+Output:a boy stands a stand on a stairs on a man is jeans green sits on . . deck . . the road . . <end>
+Output (no teacher forcing):a boy in a blue shirt is standing on a small river while holding a stick . <end> <end> . <end> at a stand in the
+============================================= 673806038_0a3682a83f.jpg
+Caption:<start> a boy in a green wetsuit takes his turn in a water sprinkler and a group of others wait . <end>
+Target:a boy in a green wetsuit takes his turn in a water sprinkler and a group of others wait . <end>
+Output:two dog with a field shirt with a arms with a grassy gun . the boy of dogs are . <end>
+Output (no teacher forcing):two dogs play with a ball . <end> <end> . <end> <end> . <end> <end> . <end> <end> . <end> .
+============================================= 1077931201_1e0bb83105.jpg
+Caption:<start> a man in water throwing a little boy up in the air and waiting for him to come down so he can catch him . <end>
+Target:a man in water throwing a little boy up in the air and waiting for him to come down so he can catch him . <end>
+Output:a young in a is a stick girl into to the air . watching . a . the down . . . . . . <end>
+Output (no teacher forcing):a young boy is standing on a rock in front of a blue sky with blue sky . <end> <end> . <end> <end> . <end> <end>
+============================================= 1240297429_c36ae0c58f.jpg
+Caption:<start> a dog is wearing a red number 6 and running through a field of green grass while being chased by a bird . <end>
+Target:a dog is wearing a red number 6 and running through a field of green grass while being chased by a bird . <end>
+Output:a dog chases jumping a blue collar 8 running blue in the green . grass grass . . ears by . lake . <end>
+Output (no teacher forcing):a dog chases a fallen in the grass . <end> <end> . <end> <end> . <end> <end> . <end> <end> . <end> <end> <end>
+============================================= 2396669903_5217a83641.jpg
+Caption:<start> a person in a cap with earflaps carries two grocery bags down a city street past a poster of a mustached man . <end>
+Target:a person in a cap with earflaps carries two grocery bags down a city street past a poster of a mustached man . <end>
+Output:a man on a white and a on a boots riding . a road street . a street . people crowd street . <end>
+Output (no teacher forcing):a man on a skateboard is riding on a sidewalk with two people in the background . <end> <end> . <end> <end> . <end>
+============================================= 1312954382_cf6d70d63a.jpg
+Caption:<start> a little girl on the street in a yellowish green and orange dress is holding a hello kitty balloon with her right hand . <end>
+Target:a little girl on the street in a yellowish green and orange dress is holding a hello kitty balloon with her right hand . <end>
+Output:a boy boy in a street . a pink . dress pink hat <end> <end> <end> pink stick <end> . its mouth hand . <end>
+Output (no teacher forcing):a boy in a red shirt is running a barefoot . <end> <end> . <end> <end> . <end> <end> <end> . <end> <end> . <end>
+============================================= 238512430_30dc12b683.jpg
+Caption:<start> a person sits on the front deck of a ship and a city and another ships is lit up in the distance . <end>
+Target:a person sits on the front deck of a ship and a city and another ships is lit up in the distance . <end>
+Output:a group in atop the side of of a boat high a mountain skyline the person is behind behind behind the background . <end>
+Output (no teacher forcing):a group of people are standing on a white tarp in the middle of a snowy area . <end> <end> . <end> <end> .
+============================================= 3687996569_99163a41c3.jpg
+Caption:<start> six women dressed in purple , blue , green , orange , and red , are waving to the crowd along the parade route . <end>
+Target:six women dressed in purple , blue , green , orange , and red , are waving to the crowd along the parade route . <end>
+Output:two children in in white and play shirts white and and and and boy sneakers play playing in play left . a other . . <end>
+Output (no teacher forcing):two young girls play on an outdoor stage . <end> <end> <end> from a museum . <end> <end> . <end> <end> out . <end> <end> .
+============================================= 136552115_6dc3e7231c.jpg
+Caption:<start> a mountain biker is jumping his bike over a rock as another cyclist stands on the trail watching . <end>
+Target:a mountain biker is jumping his bike over a rock as another cyclist stands on the trail watching . <end>
+Output:a person biker makes riding in bike over a hill . other rider watches in the background . the <end>
+Output (no teacher forcing):a person in a white helmet and black gloves hat rides his bike in the woods . <end> <end> .
+============================================= 241345981_1ef4f8109c.jpg
+Caption:<start> two american footballers in red are confronted by an opposition player in purple and white whilst being watched by spectators in a stadium . <end>
+Target:two american footballers in red are confronted by an opposition player in purple and white whilst being watched by spectators in a stadium . <end>
+Output:a men footballer in a are getting a a event . . a clothing white uniforms gold tackled by a . a . . <end>
+Output (no teacher forcing):a group of men are playing rugby . <end> <end> is <end> . <end> <end> . <end> <end> is <end> . <end> <end> <end> .
+============================================= 3403263046_3cc701a07a.jpg
+Caption:<start> a female basketball player wearing a red uniform is holding a basketball and looking up while an arm is trying to block her . <end>
+Target:a female basketball player wearing a red uniform is holding a basketball and looking up while an arm is trying to block her . <end>
+Output:a baby toddler player in a striped shirt is being a bat . is into at the adult . displayed to block . . <end>
+Output (no teacher forcing):a baby is wearing a denim coat and smiles . <end> <end> . <end> . <end> <end> . <end> <end> . <end> <end> . <end>
+============================================= 2707933554_f6dc5e0e3c.jpg
+Caption:<start> a girl in a yellow , blue and green tie dyed hat has a strange looking critter on her hand . <end>
+Target:a girl in a yellow , blue and green tie dyed hat has a strange looking critter on her hand . <end>
+Output:a dog is a green shirt black shirt green shirt is is is on yellow stick on . . . . <end>
+Output (no teacher forcing):a dog is in the middle of a body of water . <end> <end> <end> . <end> <end> <end> . <end> <end>
+============================================= 235065283_1f9a3c79db.jpg
+Caption:<start> a man wearing winter clothes and a hardhat is climbing over a snowy ledge using a rope attached to his waist . <end>
+Target:a man wearing winter clothes and a hardhat is climbing over a snowy ledge using a rope attached to his waist . <end>
+Output:a man in a clothes is a necklace is walking a a snowy mound . a cloudy <end> to his mouth . <end>
+Output (no teacher forcing):a man in a wetsuit is walking out of the snow . <end> <end> . <end> <end> <end> . <end> <end> <end> .
+============================================= 344078103_4b23931ce5.jpg
+Caption:<start> two black dogs on a snow covered ground , the ground appears blue in the background , one dog is jumping with feet off the ground . <end>
+Target:two black dogs on a snow covered ground , the ground appears blue in the background , one dog is jumping with feet off the ground . <end>
+Output:a dogs dogs are top snowy . ground . with dog in to . their background . . of . drinking . another . . other . <end>
+Output (no teacher forcing):a black dog is jumping into the snow . <end> <end> . <end> <end> . <end> . <end> <end> . <end> . <end> <end> . <end> . <end>
+============================================= 812196663_0c969970b5.jpg
+Caption:<start> a black boy and white boy in swimming trunks are hugging each other on a beach or lake . <end>
+Target:a black boy and white boy in swimming trunks are hugging each other on a beach or lake . <end>
+Output:a young child in a girl in the trunks is standing in other in the beach . her . <end>
+Output (no teacher forcing):a young girl in a pink outfit and blue shorts stands in the sand next to the water . <end>
+============================================= 961611340_251081fcb8.jpg
+Caption:<start> a little girl in a pink tutu gets ready for ballet dancing , a boy in a spider-man shirt behind . <end>
+Target:a little girl in a pink tutu gets ready for ballet dancing , a boy in a spider-man shirt behind . <end>
+Output:a little boy in a red shirt practices ready to joy . . in third in black black jacket watches him <end>
+Output (no teacher forcing):a little boy in a red shirt is playing on a beach . <end> <end> . <end> <end> . <end> . <end>
+============================================= 3471117376_40585c3fd1.jpg
+Caption:<start> a young girl with a white vest , pink sleeves and pink knit hat with flower is looking at the flower blossoms on a tree . <end>
+Target:a young girl with a white vest , pink sleeves and pink knit hat with flower is looking at the flower blossoms on a tree . <end>
+Output:a woman woman in a pink shirt and and and and a pants cap is others hair nearby at the camera . . the court . <end>
+Output (no teacher forcing):a woman in a red shirt is holding a child on a sidewalk . <end> <end> <end> . <end> . <end> <end> . <end> <end> . <end>
+============================================= 3487131146_9d3aca387a.jpg
+Caption:<start> a group of men stands near a tree as a racing car stirs up a cloud of dust on the gravel road beside them . <end>
+Target:a group of men stands near a tree as a racing car stirs up a cloud of dust on the gravel road beside them . <end>
+Output:a man of dogs in on a large , they river dog takes . . . . water . the ground . . the . <end>
+Output (no teacher forcing):a man with a yellow coat is walking along a rocky shore . <end> <end> . <end> <end> . <end> . <end> <end> . <end> .
+============================================= 3427301653_4ff0d6fd93.jpg
+Caption:<start> person in a black hat , jacket , pants and shoes sitting on concrete curb against a brick background . <end>
+Target:person in a black hat , jacket , pants and shoes sitting on concrete curb against a brick background . <end>
+Output:a in blue blue shirt and a and and and a , in a ground . a blue building . <end>
+Output (no teacher forcing):a man is watching a dog jump in the air . <end> <end> . <end> <end> <end> . <end> <end> .
+============================================= 3526431764_056d2c61dc.jpg
+Caption:<start> a woman taking a photo standing next to a tall man and in front of another man who is also taking a photo . <end>
+Target:a woman taking a photo standing next to a tall man and in front of another man who is also taking a photo . <end>
+Output:a boy in a picture of from to a boy boy who a a of a <end> . is sitting <end> a <end> . <end>
+Output (no teacher forcing):a boy in a blue shirt is making a funny face while holding a girl 's hand . <end> <end> . <end> <end> . <end>
+============================================= 3675742996_02ccef16a3.jpg
+Caption:<start> the blonde little girl picks flowers in a field , wearing a white dress with flowers on it . <end>
+Target:the blonde little girl picks flowers in a field , wearing a white dress with flowers on it . <end>
+Output:a boy girl boy is up is the field . surrounded the green shirt and its behind it . <end>
+Output (no teacher forcing):a boy with a hat and a white shirt is standing in the grass looking at the camera . <end>
+============================================= 2261257940_449b6e6c91.jpg
+Caption:<start> a brown dog is chasing a black dog through the snow in front of a wire mesh fence . <end>
+Target:a brown dog is chasing a black dog through the snow in front of a wire mesh fence . <end>
+Output:two man and is standing a man man through the snow . front of a fence fence . . <end>
+Output (no teacher forcing):two boys with their backs on their face and playing on the snow . <end> <end> . <end> <end> .
+============================================= 2949014128_0d96196261.jpg
+Caption:<start> a boy holding a ball falls down in front of another boy who has his arms reaching out while an older man in a green shirt smiles and watches . <end>
+Target:a boy holding a ball falls down in front of another boy who has his arms reaching out while an older man in a green shirt smiles and watches . <end>
+Output:a man and a football , . a the of a . . is a face around . . . older boy holds jeans blue shirt watches . . . <end>
+Output (no teacher forcing):a man holding a little boy standing outside . <end> <end> . <end> . <end> <end> . <end> <end> a out . <end> <end> . <end> <end> . <end> a out
+============================================= 2294688426_96c8614f1d.jpg
+Caption:<start> a mean wearing a black hooded sweatshirt smokes a cigarette at the side of a road . <end>
+Target:a mean wearing a black hooded sweatshirt smokes a cigarette at the side of a road . <end>
+Output:a skateboarder wearing a blue shirt sweatshirt and in ramp in a other of a woman . <end>
+Output (no teacher forcing):a skateboarder performs a trick in the air . <end> <end> . <end> <end> <end> <end> <end> <end>
+============================================= 1808007704_ee8a93abb4.jpg
+Caption:<start> a man in a red shirt is jumping from one rock to another larger rocker with two male spotters below him . <end>
+Target:a man in a red shirt is jumping from one rock to another larger rocker with two male spotters below him . <end>
+Output:a man in a white shirt is standing a a large to a . a . a other . . . . <end>
+Output (no teacher forcing):a man in a white shirt is standing behind a white tent in a green field . <end> a green blanket . <end>

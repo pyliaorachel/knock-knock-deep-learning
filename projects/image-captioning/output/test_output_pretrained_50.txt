@@ -1,0 +1,160 @@
+============================================= 1584315962_5b0b45d02d.jpg
+Caption:<start> with a pack and ski pole on the ground , a man wearing a winter coat is holding a tent while other tents are already set up . <end>
+Target:with a pack and ski pole on the ground , a man wearing a winter coat is holding a tent while other tents are already set up . <end>
+Output:a people group of people are in a snow , with man in a blue tent . in a blue . it people . in in . . <end>
+Output (no teacher forcing):a group of people are in a snowy field . <end> , with a tent . <end> . <end> . <end> . <end> . <end> . <end> . <end>
+============================================= 531055369_936fd76a63.jpg
+Caption:<start> a woman in purple walking past with a white bag in her hand , while an older man and woman are off to the side . <end>
+Target:a woman in purple walking past with a white bag in her hand , while an older man and woman are off to the side . <end>
+Output:two woman and a and on a a girl and . a hand . a a adult woman sits a . sitting the the camera . <end>
+Output (no teacher forcing):two people , one with a pink and white shirt and a pink shirt , and a white and black boots is sitting on a wall .
+============================================= 3259666643_ae49524c81.jpg
+Caption:<start> a boy in a blue basketball uniform , number 13 and a boy in a white basketball uniform , number 23 jump for the ball . <end>
+Target:a boy in a blue basketball uniform , number 13 and a boy in a white basketball uniform , number 23 jump for the ball . <end>
+Output:a woman in a blue uniform uniform is is 21 in the white in white white uniform game . and other is . the ball . <end>
+Output (no teacher forcing):a woman in a blue uniform and white shorts is playing basketball . <end> . <end> . <end> . <end> . <end> . <end> . <end> .
+============================================= 2873065944_29c01782e2.jpg
+Caption:<start> a young boy wearing orange is running with the football as the boy in blue tries to wrestle him to the ground . <end>
+Target:a young boy wearing orange is running with the football as the boy in blue tries to wrestle him to the ground . <end>
+Output:a group man in a and standing on a ball . another crowd in the . to make . . the crowd . <end>
+Output (no teacher forcing):a group of people in a red uniform and a man in the air . <end> . <end> . <end> . <end> . <end>
+============================================= 3234719720_5bb2fc5ffa.jpg
+Caption:<start> a dark haired bearded man in a white dress shirt and black sweater and a woman in a black and white dress in a small space . <end>
+Target:a dark haired bearded man in a white dress shirt and black sweater and a woman in a black and white dress in a small space . <end>
+Output:a man haired woman man and a white shirt and and a shorts is a man in black black shirt white shirt . black black black . <end>
+Output (no teacher forcing):a man in a black shirt and a woman in black shirts are posing for a picture . <end> . <end> . <end> . <end> . <end> .
+============================================= 1572532018_64c030c974.jpg
+Caption:<start> a little boy in red shorts , a boy in a black speedo , and a boy in grey shorts are all running on the beach . <end>
+Target:a little boy in red shorts , a boy in a black speedo , and a boy in grey shorts are all running on the beach . <end>
+Output:three group boy in a shorts and a man in shorts bathing bathing bathing running a boy in bathing shorts and walking in in the beach . <end>
+Output (no teacher forcing):three boys in swimsuits are playing in the water . <end> . <end> . <end> . <end> . <end> . <end> . <end> . <end> . <end> .
+============================================= 1240297429_c36ae0c58f.jpg
+Caption:<start> a dog is wearing a red number 6 and running through a field of green grass while being chased by a bird . <end>
+Target:a dog is wearing a red number 6 and running through a field of green grass while being chased by a bird . <end>
+Output:a dog jumps jumping a red collar jumping running running on the grassy . grass grass . it chased by him man in <end>
+Output (no teacher forcing):a dog jumps in the air in the grass . <end> . <end> . <end> . <end> . <end> . <end> . <end> .
+============================================= 3695517194_2a6b604cb2.jpg
+Caption:<start> a black soccer male soccer player in a purple uniform with a soccer ball on his head , and a white male soccer player in a white uniform behind him . <end>
+Target:a black soccer male soccer player in a purple uniform with a soccer ball on his head , and a white male soccer player in a white uniform behind him . <end>
+Output:two man and player wearing player in a white shirt is a white ball in the face . and a woman shirt watches player in the white shirt . her . <end>
+Output (no teacher forcing):two young girls playing soccer . <end> . <end> . <end> . <end> . <end> . <end> . <end> . <end> . <end> . <end> . <end> . <end> . <end> .
+============================================= 1277743944_f4e8c78403.jpg
+Caption:<start> a boy dressed in khaki shorts and a red shirt runs on a beach with green , white and blue structures and a half moon behind him . <end>
+Target:a boy dressed in khaki shorts and a red shirt runs on a beach with green , white and blue structures and a half moon behind him . <end>
+Output:a large with in green pants and a green backpack and past a field . a hills one and blue . behind others man background and him . <end>
+Output (no teacher forcing):a large group of people are sitting on a fence . <end> . <end> , one is holding a green and blue . <end> . <end> . <end> .
+============================================= 241347150_5ff37818c2.jpg
+Caption:<start> an american footballer in a red outfit is attacking the player in white who is running with the ball , whilst other players are nearby . <end>
+Target:an american footballer in a red outfit is attacking the player in white who is running with the ball , whilst other players are nearby . <end>
+Output:a american footballer in a red strip is being the ball in the . is running . a ball . the other players . nearby . <end>
+Output (no teacher forcing):a football player in the red strip is running with the ball . <end> . <end> . <end> . <end> . <end> . <end> . <end> .
+============================================= 1659396176_ced00a549f.jpg
+Caption:<start> two dogs , one with long brown fur , both dogs have their mouths open and teeth showing , one dogs tongue is hanging out . <end>
+Target:two dogs , one with long brown fur , both dogs have their mouths open and teeth showing , one dogs tongue is hanging out . <end>
+Output:a dogs , one with a hair and , one are are their mouths open . looking at out and in . out looking on . <end>
+Output (no teacher forcing):a dog is running on the grass . <end> . <end> . <end> . <end> . <end> . <end> . <end> . <end> . <end> and fence
+============================================= 1597319381_1e80d9e39c.jpg
+Caption:<start> a soccer player dressed in blue and white is kicking the ball to his teammate while other teammates and opponents dressed in red watch . <end>
+Target:a soccer player dressed in blue and white is kicking the ball to his teammate while other teammates and opponents dressed in red watch . <end>
+Output:a group player in in blue and white , running the ball . the left . the players watch the watch in blue . . <end>
+Output (no teacher forcing):a group of men play soccer . <end> . <end> . <end> . <end> . <end> . <end> . <end> . <end> . <end> . <end>
+============================================= 3097171315_0ba7d283b1.jpg
+Caption:<start> a group of people mills about in a room with crystal chandelier , a brown leather couch and a large round mirror . <end>
+Target:a group of people mills about in a room with crystal chandelier , a brown leather couch and a large round mirror . <end>
+Output:a man of people are in to a restaurant . a lights . one man and and . a man man in . <end>
+Output (no teacher forcing):a man and a woman sit at a table . <end> and a woman in the background . <end> . <end> . <end> .
+============================================= 146100443_906d87faa2.jpg
+Caption:<start> one child with a flower painted on her head , is wearing a red glittery outfit with a shawl and gloves , while her companion with a hat looks on . <end>
+Target:one child with a flower painted on her head , is wearing a red glittery outfit with a shawl and gloves , while her companion with a hat looks on . <end>
+Output:a woman with a hat hat hat the head is and holding a black hat suit . her crowd . her . and the friend . her crowd . on . <end>
+Output (no teacher forcing):a group of people in a crowd of people are holding a black and white dog . <end> . <end> . <end> . <end> . <end> . <end> . <end> . <end>
+============================================= 1130017585_1a219257ac.jpg
+Caption:<start> there are three young people , one dark haired holding a bottled drink , one with head tilted back and finger in her mouth , and one with spiked hair . <end>
+Target:there are three young people , one dark haired holding a bottled drink , one with head tilted back and finger in her mouth , and one with spiked hair . <end>
+Output:a are two boys men are one with , , a drink bottle . one is a . his . a . a . . . a is a hair . <end>
+Output (no teacher forcing):a girl holds a drink while another man is being held by a man in a black shirt . <end> . <end> . <end> . <end> . <end> . <end> . <end>
+============================================= 2845246160_d0d1bbd6f0.jpg
+Caption:<start> a man in a red sweatshirt and a hat is looking at his phone while another man in black walks closer to him down the sidewalk . <end>
+Target:a man in a red sweatshirt and a hat is looking at his phone while another man in black walks closer to him down the sidewalk . <end>
+Output:a girl in a red shirt and red red on standing at the friend . others woman looks a . . . the . . street . <end>
+Output (no teacher forcing):a girl in a red shirt is standing in front of a crowd of people . <end> . <end> . <end> . <end> . <end> . <end> .
+============================================= 1499495021_d295ce577c.jpg
+Caption:<start> a dark haired woman wearing a brown jacket and fatigue bottoms and a balding man wearing a green sweater and blue jeans with a fishing pole , stand at the foot of the surf . <end>
+Target:a dark haired woman wearing a brown jacket and fatigue bottoms and a balding man wearing a green sweater and blue jeans with a fishing pole , stand at the foot of the surf . <end>
+Output:two man haired woman in a brown jacket and a pants is a woman man standing a brown jacket and a pants is a backpack pole . and behind the camera . a water . <end>
+Output (no teacher forcing):two men standing on a snowy mountain . <end> . <end> . <end> . <end> . <end> . <end> . <end> . <end> . <end> . <end> . <end> . <end> . <end> . <end> .
+============================================= 3500139659_b2a60b0141.jpg
+Caption:<start> two motorcyclists are making a turn in a race , one with a red themed outfit and bike , the other in black . <end>
+Target:two motorcyclists are making a turn in a race , one with a red themed outfit and bike , the other in black . <end>
+Output:a motorcyclist racing racing a turn on the race . one is a red motorcycle helmet . a . is background . the . <end>
+Output (no teacher forcing):a man wearing a red uniform on a motorcycle . <end> , one is riding on a motorcycle . <end> . <end> . <end> .
+============================================= 275401000_8829250eb3.jpg
+Caption:<start> a brown , tan , and white dog and a black and white dog are playing with a tennis ball on a house deck . <end>
+Target:a brown , tan , and white dog and a black and white dog are playing with a tennis ball on a house deck . <end>
+Output:two dog and white dog white white dog is a white , white dog are playing with a tennis ball . a lawn . . <end>
+Output (no teacher forcing):two dogs are playing with a tennis ball . <end> . <end> . <end> . <end> . <end> . <end> . <end> . <end> . <end>
+============================================= 344078103_4b23931ce5.jpg
+Caption:<start> two black dogs on a snow covered ground , the ground appears blue in the background , one dog is jumping with feet off the ground . <end>
+Target:two black dogs on a snow covered ground , the ground appears blue in the background , one dog is jumping with feet off the ground . <end>
+Output:a black dogs running the snowy covered field in one snow in to and the snow . are is in in . a in . snow . <end>
+Output (no teacher forcing):a black dog running in the snow . <end> . <end> . <end> . <end> . <end> . <end> . <end> . <end> . <end> . <end> .
+============================================= 191003283_992257f835.jpg
+Caption:<start> a toddler boy in a red tank top and khaki shorts walks on the european street with a woman in a white top and faded blue jeans . <end>
+Target:a toddler boy in a red tank top and khaki shorts walks on the european street with a woman in a white top and faded blue jeans . <end>
+Output:a little in in a red shirt top is a pants is down the sidewalk street . a lot in the background shirt . a buildings . . <end>
+Output (no teacher forcing):a little boy in a red shirt is standing on the sidewalk with a red bag in the background . <end> . <end> . <end> . <end> . <end>
+============================================= 3428386573_670f5362f0.jpg
+Caption:<start> a tennis player focuses on the ball as he prepares to hit it , while a cameraman stands in the background next to a la quinta advertising logo . <end>
+Target:a tennis player focuses on the ball as he prepares to hit it , while a cameraman stands in the background next to a la quinta advertising logo . <end>
+Output:a boy player in on the court . he runs to hit the . the the tennis . nearby the background . to the tennis . . . . <end>
+Output (no teacher forcing):a boy in a white shirt playing tennis . <end> . <end> . <end> . <end> . <end> . <end> . <end> . <end> . <end> . <end> . <end>
+============================================= 972381743_5677b420ab.jpg
+Caption:<start> a girl dressed in black and white with mime makeup stands in the middle of a street with a white umbrella and black top hat in her hand . <end>
+Target:a girl dressed in black and white with mime makeup stands in the middle of a street with a white umbrella and black top hat in her hand . <end>
+Output:a woman in in black boots black boots black walking on on the street of a street . a silver umbrella . walking shoes . . the . . <end>
+Output (no teacher forcing):a woman in a black skirt walks down a street street with a silver umbrella . <end> . <end> . <end> . <end> . <end> . <end> . <end> .
+============================================= 130211457_be3f6b335d.jpg
+Caption:<start> a girl in a red and black leotard with white writing is standing next to a man in a cap and a girl in a hot pink and black and white checkered outfit . <end>
+Target:a girl in a red and black leotard with white writing is standing next to a man in a cap and a girl in a hot pink and black and white checkered outfit . <end>
+Output:a girl wearing a red vest red vest is red hat on standing on to a woman in a pink and a pink in a pink pink umbrella white umbrella white umbrella umbrella . <end>
+Output (no teacher forcing):a girl wearing a red shirt and a red vest and a woman wearing red and red umbrella . <end> . <end> . <end> . <end> . <end> . <end> . <end> . <end> .
+============================================= 2629445284_83390e83af.jpg
+Caption:<start> a black , white and brown tri-colored mid-sized dog jumps over a red and white jump in a field with tents and cars nearby . <end>
+Target:a black , white and brown tri-colored mid-sized dog jumps over a red and white jump in a field with tents and cars nearby . <end>
+Output:a black and white dog white dog dog , is over a hurdle and white ball . a competition . his . a . . <end>
+Output (no teacher forcing):a black and white dog is jumping over a hurdle . <end> . <end> . <end> . <end> . <end> . <end> . <end> . <end>
+============================================= 3701226275_952547ba0f.jpg
+Caption:<start> a young man holds a hammer shaped object in the air with one hand and a similar shaped object in the other while making a funny expression . <end>
+Target:a young man holds a hammer shaped object in the air with one hand and a similar shaped object in the other while making a funny expression . <end>
+Output:a young boy is a child and on in a air . his hand on a child girl on . the background . another a picture . . <end>
+Output (no teacher forcing):a young boy is walking down a street . <end> . <end> . <end> . <end> . <end> . <end> . <end> . <end> . <end> . <end> .
+============================================= 3068945309_ff0973e859.jpg
+Caption:<start> a man wearing a white uniform is trying to make a shot but the two men in black are trying to block him . <end>
+Target:a man wearing a white uniform is trying to make a shot but the two men in black are trying to block him . <end>
+Output:a basketball in a black shirt and playing to a a boy of a boy boys in a . playing to . him . <end>
+Output (no teacher forcing):a basketball player is doing a trick . <end> . <end> . <end> . <end> . <end> . <end> . <end> . <end> . <end>
+============================================= 3331525712_af1dcc47f2.jpg
+Caption:<start> a man in blue jeans is sitting on the shoulders of another person as he interacts with a woman performer onstage at a concert . <end>
+Target:a man in blue jeans is sitting on the shoulders of another person as he interacts with a woman performer onstage at a concert . <end>
+Output:a group in a jeans and doing on a stage of a crowd in a is behind a crowd in in . night stage . <end>
+Output (no teacher forcing):a group of people are playing in a dimly lit stage . <end> . <end> . <end> . <end> . <end> . <end> . <end> .
+============================================= 3479050296_65bcea69a0.jpg
+Caption:<start> two boys one in a green shirt and one in a blue shirt and a girl in a red jacket and tie on a brown bench . <end>
+Target:two boys one in a green shirt and one in a blue shirt and a girl in a red jacket and tie on a brown bench . <end>
+Output:two girls and in a green and and red girl a green dress and red red in the green shirt . red . the green shirt . <end>
+Output (no teacher forcing):two girls in a green dress and red shirts are smiling . <end> . <end> . <end> . <end> . <end> . <end> . <end> . <end> .
+============================================= 264141937_585320617a.jpg
+Caption:<start> a woman wearing dollar sign glasses , holding a dollar bill , stands with a suitcase that says " lucky " that is overflowing with cash . <end>
+Target:a woman wearing dollar sign glasses , holding a dollar bill , stands with a suitcase that says " lucky " that is overflowing with cash . <end>
+Output:a man in a on on is and a sign " on " on his sign in is " . . . is also . his to <end>
+Output (no teacher forcing):a man in a white shirt and a black shirt on a black shirt and black pants is skateboarding on a ramp . <end> . <end> . <end>
+============================================= 3032790880_d216197d55.jpg
+Caption:<start> a soccer player in a red and white uniform was chasing the soccer ball and was tripped by a player in a purple uniform . <end>
+Target:a soccer player in a red and white uniform was chasing the soccer ball and was tripped by a player in a purple uniform . <end>
+Output:a football player in a red uniform black uniform is in a ball player . a in . . player . the field strip . <end>
+Output (no teacher forcing):a football player in a red uniform is running on the field . <end> while another man in the background . <end> . <end> . <end>
+============================================= 3359587274_4a2b140b84.jpg
+Caption:<start> a person attached to a parasail and wearing equipment on his feet is suspended in midair over a snowy landscape , while silhouetted against a sunny , blue sky . <end>
+Target:a person attached to a parasail and wearing equipment on his feet is suspended in midair over a snowy landscape , while silhouetted against a sunny , blue sky . <end>
+Output:a person is is a sky . a a on the back in in by the . the sunset landscape . . the . the cloudy day cloudy sky . <end>
+Output (no teacher forcing):a person is in the air at sunset in the mountains . <end> . <end> . <end> . <end> . <end> . <end> . <end> . <end> . <end> . <end>
