@@ -1,10 +1,10 @@
 # Image Captioning
 
-Image captioning based on encoder-decoder model.
+Image captioning based on encoder-decoder + attention model.
 
-- Running on [Colab](https://colab.research.google.com/drive/1Dp2F2DOZG8uALnBV_J-972s6QEGucmN2?usp=sharing) (Naive model)
-- Running on [Colab](https://colab.research.google.com/drive/1oAfCxGen_zY_KlamhHKcmKGZ24w2U7Gc?usp=sharing) (With attention)
-- Running on [Colab](https://colab.research.google.com/drive/1GeUnHgA_dRFfEMkZ02PqXA_M430GtJoW?usp=sharing) (With attention + pretrained models)
+- Base model on [Colab](https://colab.research.google.com/drive/1aFnnkRAHTLmAjj7YjIisF6XmVl5Ohxko?usp=sharing)
+- Pretrained model on [Colab](https://colab.research.google.com/drive/1yA_IaIxGhbU7iBrIGiS0PpQ8U9F4iSI-?usp=sharing)
+- Pretrained model with curriculum learning on [Colab](https://colab.research.google.com/drive/10DjYB8wnnWjcjUj8Vo1TSKmny11IdrXL?usp=sharing)
 
 ## Dataset
 
@@ -37,28 +37,74 @@ $ python main.py <image-folder> <caption-file> <output-encoder-file> <output-dec
 $ python gen.py <encoder-file> <decoder-file> <image-file> <caption-file> --embedding-dim <emb-dim> --use-pretrained
 ```
 
-## Training Info We use
-
-With attention:
+If you want to enable curriculum learning:
 
 ```bash
-BATCH_SIZE: 32
-EMBEDDING_DIM: 256
-DEC_HIDDEN_DIM: 256
-LR: 1e-05
-ENCODER DROPOUT: 0.2
-DECODER DROPOUT: 0.2
-EPOCHS: 100
-LOG_INTERVAL: 10
-USE PRETRAINED: False
-Training set size: 6472
-Test set size: 1619
-Vocab size: 4660
+# Download GloVe embeddings from their website, then put the embedding file you want under data/
+# https://nlp.stanford.edu/projects/glove/
+
+# Train & test
+$ python main.py <image-folder> <caption-file> <output-encoder-file> <output-decoder-file> --use-curriculum-learning
+
+# Generate captions
+$ python gen.py <encoder-file> <decoder-file> <image-file> <caption-file> --use-curriculum-learning
 ```
 
-With attention and pretrained DenseNet + GloVe embeddings:
+## Training Info We use
 
-TODO
+Base:
+
+```bash
+BATCH_SIZE: 64
+EMBEDDING_DIM: 300
+DEC_HIDDEN_DIM: 512
+LR: 3e-04
+ENCODER DROPOUT: 0.2
+DECODER DROPOUT: 0.2
+EPOCHS: 50
+LOG_INTERVAL: 10
+USE PRETRAINED: False
+USE CURRICULUM LEARNING: False
+Training set size: 32360
+Test set size: 8095
+Vocab size: 8922
+```
+
+With pretrained:
+
+```bash
+BATCH_SIZE: 256
+EMBEDDING_DIM: 300
+DEC_HIDDEN_DIM: 512
+LR: 0.0003
+ENCODER DROPOUT: 0.2
+DECODER DROPOUT: 0.2
+EPOCHS: 50
+LOG_INTERVAL: 10
+USE PRETRAINED: True
+USE CURRICULUM LEARNING: False
+Training set size: 32360
+Test set size: 8095
+Vocab size: 8922
+```
+
+With pretrained + curriculum learning:
+
+```bash
+BATCH_SIZE: 256
+EMBEDDING_DIM: 300
+DEC_HIDDEN_DIM: 512
+LR: 0.0003
+ENCODER DROPOUT: 0.2
+DECODER DROPOUT: 0.2
+EPOCHS: 50
+LOG_INTERVAL: 10
+USE PRETRAINED: True
+USE CURRICULUM LEARNING: True
+Training set size: 32360
+Test set size: 8095
+Vocab size: 8922
+```
 
 ## Reference
 
